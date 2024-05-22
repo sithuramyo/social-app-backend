@@ -31,7 +31,7 @@ public class UsersServices : IUsersServices
 
         var users = request.Change();
 
-        await _context.AddAsync(users,ct);
+        await _context.Users.AddAsync(users,ct);
         var usersSaveResult = await _context.SaveChangesAsync(ct);
         if (usersSaveResult <= 0)
         {
@@ -57,11 +57,12 @@ public class UsersServices : IUsersServices
             return model;
         }
 
+        model.AccessTokenType = AuthenticationConstant.AccessTokenType;
         model.AccessToken = accessTokenModel.AccessToken;
-        model.AccessTokenExpires = accessTokenModel.AccessTokenExpires.Day * 24;
+        model.AccessTokenExpires = accessTokenModel.ExpireCount * 24;
         model.RefreshToken = refreshTokenModel.Token;
-        model.RefreshTokenExpires = refreshTokenModel.Expires.Day * 24;
-        model.Response.Set(ResponseConstants.I0000);
+        model.RefreshTokenExpires = refreshTokenModel.ExpireCount * 24;
+        model.Response.Set(ResponseConstants.S0000);
         return model;
     }
 }

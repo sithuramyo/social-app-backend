@@ -45,9 +45,27 @@ namespace AuthenticationService.Resources {
             }
         }
         
+        internal static string S0000 {
+            get {
+                return ResourceManager.GetString("S0000", resourceCulture);
+            }
+        }
+        
         internal static string I0000 {
             get {
                 return ResourceManager.GetString("I0000", resourceCulture);
+            }
+        }
+        
+        internal static string W0000 {
+            get {
+                return ResourceManager.GetString("W0000", resourceCulture);
+            }
+        }
+        
+        internal static string E0000 {
+            get {
+                return ResourceManager.GetString("E0000", resourceCulture);
             }
         }
     }

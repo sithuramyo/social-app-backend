@@ -1,0 +1,24 @@
+2024-05-22 21:49:38.879 +06:30 [ERR] Error : An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call., 
+    at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AuthenticationService.Features.Users.UsersServices.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersServices.cs:line 35
+   at AuthenticationService.Features.Users.UsersController.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersController.cs:line 24
+2024-05-22 21:51:34.931 +06:30 [ERR] Error : An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call., 
+    at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AuthenticationService.Features.Users.UsersServices.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersServices.cs:line 35
+   at AuthenticationService.Features.Users.UsersController.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersController.cs:line 24
+2024-05-22 21:54:36.682 +06:30 [ERR] Error : An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call., 
+    at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AuthenticationService.Features.Users.UsersServices.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersServices.cs:line 35
+   at AuthenticationService.Features.Users.UsersController.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersController.cs:line 24
+2024-05-22 21:58:42.217 +06:30 [ERR] Error : An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call., 
+    at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AuthenticationService.Features.Users.UsersServices.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersServices.cs:line 35
+   at AuthenticationService.Features.Users.UsersController.UsersRegister(UsersRegisterRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Users/UsersController.cs:line 24

@@ -9,7 +9,8 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.3.24172.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.5" />
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0" />
         <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
@@ -21,9 +22,28 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\DatabaseService\DatabaseService.csproj" />
+      <ProjectReference Include="..\Shared\Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
       <EmbeddedResource Update="Resources\ResponseDescritpion.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>ResponseDescritpion.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\ResponseDescription.en-US.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResponseDescription.en-US.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\ResponseDescription.my-MM.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResponseDescription.my-MM.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
@@ -33,17 +53,16 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>ResponseDescritpion.resx</DependentUpon>
       </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\DatabaseService\DatabaseService.csproj" />
-      <ProjectReference Include="..\Shared\Shared.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+      <Compile Update="Resources\ResponseDescription.en-US.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResponseDescription.en-US.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\ResponseDescription.my-MM.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResponseDescription.my-MM.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>

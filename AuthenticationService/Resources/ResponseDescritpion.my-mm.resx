@@ -11,7 +11,16 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="S0000" xml:space="preserve">
+        <value>အောင်မြင်ပါသည်။</value>
+    </data>
+    <data name="W0000" xml:space="preserve">
+        <value>အချက်လက်များ မပါဝင်ပါ။</value>
+    </data>
     <data name="I0000" xml:space="preserve">
-        <value>အောင်မြင်ပါသည်</value>
+        <value>ဆောင်ရွက်ချက်များ မရရှိနိုင်သေးပါ</value>
+    </data>
+    <data name="E0000" xml:space="preserve">
+        <value>မျှော်လင့်မထား‌ေသာ ချို့ယွင်းချက်များ။</value>
     </data>
 </root>

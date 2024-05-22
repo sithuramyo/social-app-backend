@@ -13,16 +13,8 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Localization.Abstractions.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
@@ -78,3 +70,9 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.pdb
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.genruntimeconfig.cache
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/ref/AuthenticationService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Localization.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescription.en-US.resources
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescription.my-MM.resources

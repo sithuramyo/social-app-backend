@@ -14,7 +14,8 @@ public class TokenService
         var refreshToken = new RefreshTokenModel
         {
             Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
-            Expires = DateTime.Now.AddDays(10)
+            Expires = DateTime.Now.AddDays(10),
+            ExpireCount = 10
         };
         return refreshToken;
     }
@@ -36,6 +37,7 @@ public class TokenService
             signingCredentials: credentials);
 
         model.AccessToken = new JwtSecurityTokenHandler().WriteToken(token);
+        model.ExpireCount = 7;
         return model;
     }
 }

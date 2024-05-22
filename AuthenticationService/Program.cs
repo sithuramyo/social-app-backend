@@ -5,11 +5,14 @@ using DatabaseService.AppContextModels;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
+using Shared.Extensions;
+using Shared.Response;
 using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -63,10 +66,11 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.DefaultRequestCulture = new RequestCulture(defaultCulture);
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
+    options.FallBackToParentCultures = true;
+    options.FallBackToParentUICultures = true;
 });
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-
 #endregion
 
 #region Extension Service Configure
@@ -76,8 +80,6 @@ ServicesInjection.Configure(builder.Configuration);
 builder.Services.AddServices();
 
 #endregion
-
-
 
 #region Db Connection
 
@@ -98,9 +100,8 @@ var connectionString =
 
 #region Mysql Connection
 
-var serverVersion = new MySqlServerVersion(new Version(8, 0, 34));
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString(connectionString), serverVersion
+    options.UseMySql("server=127.0.0.1;port=3306;database=socialdb;User=root;password=rootroot;CharSet=utf8;", ServerVersion.AutoDetect(connectionString)
     )
 );
 
@@ -133,8 +134,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
+ResourcesExtension.Configure(app.Services.GetRequiredService<IStringLocalizer<ResponseDescription>>());
+
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

@@ -1,14 +1,16 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER $APP_UID
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 80
+EXPOSE 81
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ApiGatewayService.csproj", "."]
-RUN dotnet restore "ApiGatewayService.csproj"
+COPY ["ApiGatewayService/ApiGatewayService.csproj", "ApiGatewayService/"]
+RUN dotnet restore "ApiGatewayService/ApiGatewayService.csproj"
 COPY . .
-WORKDIR "/src"
+WORKDIR "/src/ApiGatewayService"
 RUN dotnet build "ApiGatewayService.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish

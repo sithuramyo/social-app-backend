@@ -27,3 +27,4 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/Debug/net8.0/ApiGatewayService.pdb
 /Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/Debug/net8.0/ApiGatewayService.genruntimeconfig.cache
 /Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/Debug/net8.0/ref/ApiGatewayService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/Debug/net8.0/ApiGatewayService.sourcelink.json

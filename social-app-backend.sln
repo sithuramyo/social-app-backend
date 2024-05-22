@@ -4,6 +4,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGatewayService", "ApiGatewayService\ApiGatewayService.csproj", "{415B9D21-17E7-41BF-AFBB-46C193157E34}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiServices", "ApiServices", "{FFC43ACD-4E24-4BC6-A32C-AEE0ADED43BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiShared", "ApiShared", "{A7EFA6A3-6F1D-4801-8804-803012041F98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiDatabase", "ApiDatabase", "{B3497756-B351-400B-8735-2E869198CD25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseService", "DatabaseService\DatabaseService.csproj", "{5EBFC226-47BA-417C-8371-311BF1859775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{ADE505CF-2208-4FF3-941B-C1B90CE6B521}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{E13B6922-E573-4D5C-AC4D-F76EB8EE50D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{FC22CE67-6E20-4608-B4E8-46AC9115238D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB0B46C8-E0AA-4CFA-9765-4610661B05AD}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,8 +33,24 @@ Global
 		{415B9D21-17E7-41BF-AFBB-46C193157E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{415B9D21-17E7-41BF-AFBB-46C193157E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{415B9D21-17E7-41BF-AFBB-46C193157E34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EBFC226-47BA-417C-8371-311BF1859775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EBFC226-47BA-417C-8371-311BF1859775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EBFC226-47BA-417C-8371-311BF1859775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EBFC226-47BA-417C-8371-311BF1859775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE505CF-2208-4FF3-941B-C1B90CE6B521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE505CF-2208-4FF3-941B-C1B90CE6B521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE505CF-2208-4FF3-941B-C1B90CE6B521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE505CF-2208-4FF3-941B-C1B90CE6B521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC22CE67-6E20-4608-B4E8-46AC9115238D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC22CE67-6E20-4608-B4E8-46AC9115238D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC22CE67-6E20-4608-B4E8-46AC9115238D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC22CE67-6E20-4608-B4E8-46AC9115238D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{415B9D21-17E7-41BF-AFBB-46C193157E34} = {0A6E564A-D8DA-440D-A227-9810648FCAC1}
+		{5EBFC226-47BA-417C-8371-311BF1859775} = {B3497756-B351-400B-8735-2E869198CD25}
+		{ADE505CF-2208-4FF3-941B-C1B90CE6B521} = {A7EFA6A3-6F1D-4801-8804-803012041F98}
+		{E13B6922-E573-4D5C-AC4D-F76EB8EE50D7} = {FFC43ACD-4E24-4BC6-A32C-AEE0ADED43BB}
+		{FC22CE67-6E20-4608-B4E8-46AC9115238D} = {E13B6922-E573-4D5C-AC4D-F76EB8EE50D7}
 	EndGlobalSection
 EndGlobal

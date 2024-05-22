@@ -1,0 +1,35 @@
+﻿version: '3.8'
+
+services:
+  socialbackenddb:
+    container_name: social-backend-db
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: socialdb
+      MYSQL_USER: socialuser
+      MYSQL_PASSWORD: socialpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  authenticationservice:
+    container_name: social-backend-app
+    image: authenticationservice
+    build:
+      context: .
+      dockerfile: AuthenticationService/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - socialbackenddb
+    environment:
+      DB_HOST: socialbackenddb
+      DB_PORT: 3306
+      DB_NAME: socialdb
+      DB_USER: socialuser
+      DB_PASSWORD: socialpassword
+
+volumes:
+  db_data:

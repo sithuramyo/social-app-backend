@@ -23,12 +23,19 @@ public class UsersServices : IUsersServices
     public async Task<UsersRegisterResponseModel> UsersRegister(UsersRegisterRequestModel request,CancellationToken ct)
     {
         UsersRegisterResponseModel model = new();
+        
         if (request.Email.IsNullOrEmpty())
         {
             model.Response.Set(ResponseConstants.W0000);
             return model;
         }
 
+        if (!request.Email.IsValidEmail())
+        {
+            model.Response.Set(ResponseConstants.W0003);
+            return model;
+        }
+        
         var isExist = await _context.Users.AnyAsync(x => x.Email == request.Email && !x.IsDeleted,ct);
         
         if (isExist)

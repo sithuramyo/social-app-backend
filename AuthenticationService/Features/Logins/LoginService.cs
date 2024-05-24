@@ -26,7 +26,7 @@ public class LoginService : ILoginService
             return model;
         }
 
-        var users = await _context.Users.FirstOrDefaultAsync(x => x.Email == request.Email && !x.IsDeleted);
+        var users = await _context.Users.FirstOrDefaultAsync(x => x.Email == request.Email && !x.IsDeleted,ct);
         if (users is null)
         {
             model.Response.Set(ResponseConstants.W0002);

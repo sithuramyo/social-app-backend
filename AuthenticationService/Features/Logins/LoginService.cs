@@ -1,53 +1,46 @@
 using AuthenticationService.Features.CommonServices;
 using DatabaseService.AppContextModels;
-using DatabaseService.ChangeModels;
 using DatabaseService.DataModels.Authentication;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using Shared.Constants;
 using Shared.Extensions;
-using Shared.Models.Users;
-using Shared.Response;
+using Shared.Models.Logins;
 
-namespace AuthenticationService.Features.Users;
+namespace AuthenticationService.Features.Logins;
 
-public class UsersServices : IUsersServices
+public class LoginService : ILoginService
 {
     private readonly AppDbContext _context;
 
-    public UsersServices(AppDbContext context)
+    public LoginService(AppDbContext context)
     {
         _context = context;
     }
 
-    public async Task<UsersRegisterResponseModel> UsersRegister(UsersRegisterRequestModel request,CancellationToken ct)
+    public async Task<LoginResponseModel> Login(LoginRequestModel request,CancellationToken ct)
     {
-        UsersRegisterResponseModel model = new();
-        if (request.Email.IsNullOrEmpty())
+        LoginResponseModel model = new();
+        if (request.Email.IsNullOrEmpty() || request.Password.IsNullOrEmpty())
         {
             model.Response.Set(ResponseConstants.W0000);
             return model;
         }
 
-        var isExist = await _context.Users.AnyAsync(x => x.Email == request.Email && !x.IsDeleted,ct);
-        
-        if (isExist)
+        var users = await _context.Users.FirstOrDefaultAsync(x => x.Email == request.Email && !x.IsDeleted);
+        if (users is null)
         {
-            model.Response.Set(ResponseConstants.W0001);
-            return model;
-        }
-        
-        request.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
-
-        var users = request.Change();
-        await _context.Users.AddAsync(users,ct);
-        var usersSaveResult = await _context.SaveChangesAsync(ct);
-        if (usersSaveResult <= 0)
-        {
-            model.Response.Set(ResponseConstants.E0000);
+            model.Response.Set(ResponseConstants.W0002);
             return model;
         }
 
+        var isValid = BCrypt.Net.BCrypt.Verify(request.Password, users.Password);
+        
+        if (!isValid)
+        {
+            model.Response.Set(ResponseConstants.W0003);
+            return model;
+        }
+        
         var accessTokenModel = TokenService.GetJwtToken(users.UserId);
         var refreshTokenModel = TokenService.GetRefreshToken();
 

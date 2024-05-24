@@ -19,6 +19,8 @@ public class ResponseConstants
 
     public const string W0000 = "W0000"; //Data is nothing
     public const string W0001 = "W0001"; //Duplicate data
+    public const string W0002 = "W0002"; //Users not found
+    public const string W0003 = "W0003"; //Users not found
 
     #endregion
 

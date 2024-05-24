@@ -2,6 +2,8 @@ using AuthenticationService.Features.CommonServices;
 using DatabaseService.AppContextModels;
 using DatabaseService.ChangeModels;
 using DatabaseService.DataModels.Authentication;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using Shared.Constants;
 using Shared.Extensions;
 using Shared.Models.Users;
@@ -27,6 +29,14 @@ public class UsersServices : IUsersServices
             return model;
         }
 
+        var isExist = await _context.Users.AnyAsync(x => x.Email == request.Email && !x.IsDeleted,ct);
+        
+        if (isExist)
+        {
+            model.Response.Set(ResponseConstants.W0001);
+            return model;
+        }
+        
         request.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
         var users = request.Change();
@@ -49,8 +59,10 @@ public class UsersServices : IUsersServices
             RefreshToken = refreshTokenModel.Token,
             RefreshTokenExpires = refreshTokenModel.Expires
         };
+        
         await _context.Login.AddAsync(login,ct);
         var loginResult = await _context.SaveChangesAsync(ct);
+        
         if (loginResult <= 0)
         {
             model.Response.Set(ResponseConstants.E0000);

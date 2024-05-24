@@ -53,6 +53,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 #endregion
 
 #region Localization
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 const string defaultCulture = "en-US";
 
 var supportedCultures = new[]
@@ -66,11 +67,10 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.DefaultRequestCulture = new RequestCulture(defaultCulture);
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
-    options.FallBackToParentCultures = true;
-    options.FallBackToParentUICultures = true;
 });
 
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+
 #endregion
 
 #region Extension Service Configure

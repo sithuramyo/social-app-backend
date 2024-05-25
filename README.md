@@ -99,31 +99,55 @@ CREATE TABLE `Tbl_Login` (
  ```
  #### Request
  ```json
- {
-    "name" : "string",
-    "email" : "string@gmail.com",
-    "password" : "string",
-    "dateOfBirth" : "2024-05-24",
-    "profileImage" : ""
- }
+  {
+   "name" : "sithuramyo",
+   "email" : "sithuramyo@gmail.com",
+   "password" : "sithuramyo",
+   "dateOfBirth" : "2024-05-24",
+   "profileImage" : ""
+}
  ```
  #### Response
 ```json
-
+ {
+    "accessTokenType": "Bearer",
+    "accessToken": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI5OTFkMGY5Yi0xMTRlLTQwYTUtODUyNC0xN2UxMTg4ZjYzOWQiLCJleHAiOjE3MTcyMzQzMjR9.j-HLGNe0-YedY_A14-0b0GURr5ISNK5N7jRcEw2897x2u7jp8FTz7YC7dEyK7Z1Ks86bKWPU7tAQ2DYwbK4TZQ",
+    "accessTokenExpires": 168,
+    "refreshToken": "U5+0UdeXkumO/vNApOkuueM+HaXCKOWy2z+b3I9u2Q1EDiSOnrx1lmBALl7vFo2PkoTWmF6mU5S6hio2EWjvDA==",
+    "refreshTokenExpires": 240,
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "S0000",
+        "responseType": 1,
+        "isError": false
+    }
+}
 ```
 
  ### Login
  ```js
- POST http://localhost:8081/authapi/users/users-register
+ POST http://localhost:8081/authapi/login/users-login
  ```
  #### Reqeust
  ```json
- {
-    "email" : "string",
-    "password" : "string"
- }
+  {
+    "email": "sithuramyo@gmail.com",
+    "password": "sithuramyo"
+  }
  ```
  #### Response
  ```json
-
+ {
+    "accessTokenType": "Bearer",
+    "accessToken": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI5OTFkMGY5Yi0xMTRlLTQwYTUtODUyNC0xN2UxMTg4ZjYzOWQiLCJleHAiOjE3MTcyMzQ0ODN9.m69l9YAX3xYN_4ufYZkfcTLciNJxbn2_GLvuLZRimT6jZJX6p09_a-nRE3suFWdoI_eFgqsuStmDPCAf7FTjhw",
+    "accessTokenExpires": 168,
+    "refreshToken": "NN3yNjzj+xqRefXQBThA3bfBmbuM71R6XkQPX8FMptHNTdE4R1ccZ6CVg75omjlaMuW7ggAfOkEObW9e/nGEoQ==",
+    "refreshTokenExpires": 240,
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "S0000",
+        "responseType": 1,
+        "isError": false
+    }
+  }
  ```

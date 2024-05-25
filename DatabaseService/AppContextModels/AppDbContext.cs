@@ -16,8 +16,8 @@ public class AppDbContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseMySql("server=localhost;port=3306;database=socialdb;User=root;password=rootroot;", 
-                ServerVersion.AutoDetect("server=localhost;port=3306;database=socialdb;User=root;password=rootroot;")); // Adjust the version to match your MySQL version
+            optionsBuilder.UseMySql("server=social-backend-db;port=3307;database=socialdb;User=socialuser;password=socialpassword;", 
+                ServerVersion.AutoDetect("server=social-backend-db;port=3307;database=socialdb;User=socialuser;password=socialpassword")); // Adjust the version to match your MySQL version
         }
     }
         

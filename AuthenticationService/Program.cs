@@ -17,6 +17,7 @@ using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://0.0.0.0:8081");
 builder.Services.AddControllers();
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -101,7 +102,7 @@ var connectionString =
 #region Mysql Connection
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql("server=127.0.0.1;port=3306;database=socialdb;User=root;password=rootroot;CharSet=utf8;", ServerVersion.AutoDetect(connectionString)
+    options.UseMySql("server=social-backend-db;port=3307;database=socialdb;User=socialuser;password=socialpassword;", ServerVersion.AutoDetect("server=socialbackenddb;port=3307;database=socialdb;User=socialuser;password=socialpassword;")
     )
 );
 
@@ -141,6 +142,6 @@ ResourcesExtension.Configure(app.Services.GetRequiredService<IStringLocalizer<Re
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapGet("/", () => "Social App Backend AuthenticationApi");
 app.MapControllers();
 app.Run();

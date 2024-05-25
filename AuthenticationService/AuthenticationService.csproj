@@ -27,12 +27,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-
-    <ItemGroup>
       <EmbeddedResource Update="Resources\ResponseDescritpion.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>ResponseDescritpion.Designer.cs</LastGenOutput>
@@ -63,6 +57,12 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>ResponseDescription.my-MM.resx</DependentUpon>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>

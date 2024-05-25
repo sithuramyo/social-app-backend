@@ -1,5 +1,6 @@
 # Step One
 - run docker-compose file using cmd 'docker-compose up -d'
+  
 # Step Two
 - Change Stage value as 1 in appsetting.json(1 defined as default,2 defined as local)
   
@@ -9,8 +10,10 @@
 - Port => 3307
 - User => socialuser
 - Password => socialpassword
+- 
 # Step Four
 - Run table script
+  
   For Tbl_Users
 ```sql
 CREATE TABLE `Tbl_Users` (
@@ -31,8 +34,6 @@ CREATE TABLE `Tbl_Users` (
 ```
 
   For Tbl_Login
-
-  
 ```sql
 CREATE TABLE `Tbl_Login` (
   `Id` bigint NOT NULL AUTO_INCREMENT,
@@ -43,4 +44,39 @@ CREATE TABLE `Tbl_Login` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 ```
+# Step Five
+## API Documentation
+- [Users Register](#users-register)
+- [Login](#login)
 
+
+
+ ### Users Register
+ 
+ #### Request
+```json
+{
+    "name" : "string",
+    "email" : "string@gmail.com",
+    "password" : "string",
+    "dateOfBirth" : "2024-05-24",
+    "profileImage" : ""
+}
+```
+#### Response
+```json
+
+```
+
+### Login
+#### Reqeust
+```json
+{
+    "email" : "string",
+    "password" : "string"
+}
+```
+#### Response
+```json
+
+```

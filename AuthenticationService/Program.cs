@@ -20,7 +20,6 @@ using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.UseUrls("http://0.0.0.0:8081");
 builder.Services.AddControllers();
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -31,17 +30,19 @@ builder.Services.AddSwaggerGen();
 
 var stage = builder.Configuration.GetSection("Stage").Value;
 
-// var settingFileName = "appsettings";
-// var enumStage = stage.ToEnum<EnumStageType>();
-// settingFileName = enumStage switch
-// {
-//     EnumStageType.Local => settingFileName + ".local.json",
-//     _ => settingFileName + ".json"
-// };
-//
-// builder.Configuration.AddJsonFile(settingFileName, optional: true, reloadOnChange: true);
+#endregion
+
+#region MyRegion
+
+var url = "http://0.0.0.0:8081";
+if ((int)EnumStageType.Local == Convert.ToInt32(stage))
+{
+    url = "http://localhost:5244";
+}
 
 #endregion
+
+builder.WebHost.UseUrls(url);
 
 #region Authentication
 
@@ -156,6 +157,21 @@ Log.Logger = new LoggerConfiguration()
 
 #endregion
 
+#region Cors
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        b =>
+        {
+            b.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -174,6 +190,8 @@ app.MapHealthChecks("health", new HealthCheckOptions
 });
 
 app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapGet("/", () => "Social App Backend AuthenticationApi");

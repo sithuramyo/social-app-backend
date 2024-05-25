@@ -76,3 +76,6 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescription.en-US.resources
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescription.my-MM.resources
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.MySql.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.UI.Client.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.UI.Core.dll

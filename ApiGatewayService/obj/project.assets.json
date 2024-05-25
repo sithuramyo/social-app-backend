@@ -98,11 +98,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
+      "projectUniqueName": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
       "projectName": "ApiGatewayService",
-      "projectPath": "D:\\Projects\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
+      "projectPath": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\social-app-backend\\ApiGatewayService\\obj\\",
+      "outputPath": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

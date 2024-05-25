@@ -2040,11 +2040,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\social-app-backend\\AuthenticationService\\AuthenticationService.csproj",
+      "projectUniqueName": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\AuthenticationService.csproj",
       "projectName": "AuthenticationService",
-      "projectPath": "D:\\Projects\\social-app-backend\\AuthenticationService\\AuthenticationService.csproj",
+      "projectPath": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\AuthenticationService.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\social-app-backend\\AuthenticationService\\obj\\",
+      "outputPath": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2065,11 +2065,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projects\\social-app-backend\\DatabaseService\\DatabaseService.csproj": {
-              "projectPath": "D:\\Projects\\social-app-backend\\DatabaseService\\DatabaseService.csproj"
+            "D:\\Projects\\Social App\\social-app-backend\\DatabaseService\\DatabaseService.csproj": {
+              "projectPath": "D:\\Projects\\Social App\\social-app-backend\\DatabaseService\\DatabaseService.csproj"
             },
-            "D:\\Projects\\social-app-backend\\Shared\\Shared.csproj": {
-              "projectPath": "D:\\Projects\\social-app-backend\\Shared\\Shared.csproj"
+            "D:\\Projects\\Social App\\social-app-backend\\Shared\\Shared.csproj": {
+              "projectPath": "D:\\Projects\\Social App\\social-app-backend\\Shared\\Shared.csproj"
             }
           }
         }

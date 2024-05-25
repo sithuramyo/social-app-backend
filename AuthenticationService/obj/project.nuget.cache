@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ZJpQlh3z6aAmORyzCiodgYViya4s7UMGdg4Bj6jqHuchsRf+bVOqnMlMVEvfupXhU/T4jxOLxaiLtRzJRLLZg==",
+  "dgSpecHash": "fYOeDKdjfzTQoiV/GfCCndA5M7ki6QqOj0Vi3L7nZZASPgbmmetGru2hVQd15A0Yzesa+BSJsRWWvCy+JE1XnQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\social-app-backend\\AuthenticationService\\AuthenticationService.csproj",
+  "projectFilePath": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\AuthenticationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FNZxBn3Tkp9UyV2fLR/ZBsueP9QXfUOv8wUOn1kUwbL3K5gRWW3u9vfIOkVMFv322WRKTCUUBHLfnKiS1uAMmw==",
+  "dgSpecHash": "T0gMsEVdJNcQplPCwD5rEFgEJsOPJvJHjXzjA9FeXzPOL5hlUXWrFJCBIYq7NDdRJxqm6A2XDV83xVtJyQ3PKg==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\social-app-backend\\Shared\\Shared.csproj",
+  "projectFilePath": "D:\\Projects\\Social App\\social-app-backend\\Shared\\Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\8.0.1\\microsoft.extensions.localization.abstractions.8.0.1.nupkg.sha512",

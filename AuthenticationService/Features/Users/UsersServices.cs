@@ -20,10 +20,10 @@ public class UsersServices : IUsersServices
         _context = context;
     }
 
-    public async Task<UsersRegisterResponseModel> UsersRegister(UsersRegisterRequestModel request,CancellationToken ct)
+    public async Task<UsersRegisterResponseModel> UsersRegister(UsersRegisterRequestModel request, CancellationToken ct)
     {
         UsersRegisterResponseModel model = new();
-        
+
         if (request.Email.IsNullOrEmpty())
         {
             model.Response.Set(ResponseConstants.W0000);
@@ -35,19 +35,19 @@ public class UsersServices : IUsersServices
             model.Response.Set(ResponseConstants.W0003);
             return model;
         }
-        
-        var isExist = await _context.Users.AnyAsync(x => x.Email == request.Email && !x.IsDeleted,ct);
-        
+
+        var isExist = await _context.Users.AnyAsync(x => x.Email == request.Email && !x.IsDeleted, ct);
+
         if (isExist)
         {
             model.Response.Set(ResponseConstants.W0001);
             return model;
         }
-        
+
         request.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
         var users = request.Change();
-        await _context.Users.AddAsync(users,ct);
+        await _context.Users.AddAsync(users, ct);
         var usersSaveResult = await _context.SaveChangesAsync(ct);
         if (usersSaveResult <= 0)
         {
@@ -65,10 +65,10 @@ public class UsersServices : IUsersServices
             RefreshToken = refreshTokenModel.Token,
             RefreshTokenExpires = refreshTokenModel.Expires
         };
-        
-        await _context.Login.AddAsync(login,ct);
+
+        await _context.Login.AddAsync(login, ct);
         var loginResult = await _context.SaveChangesAsync(ct);
-        
+
         if (loginResult <= 0)
         {
             model.Response.Set(ResponseConstants.E0000);

@@ -17,22 +17,10 @@ public class AppDbContext : DbContext
         if (!optionsBuilder.IsConfigured)
         {
             optionsBuilder.UseMySql("server=social-backend-db;port=3307;database=socialdb;User=socialuser;password=socialpassword;", 
-                ServerVersion.AutoDetect("server=social-backend-db;port=3307;database=socialdb;User=socialuser;password=socialpassword")); // Adjust the version to match your MySQL version
+                ServerVersion.AutoDetect("server=localhost;port=3307;database=socialdb;User=socialuser;password=socialpassword")); // Adjust the version to match your MySQL version
         }
     }
         
     public DbSet<Users> Users { get; set; }
     public DbSet<Login> Login { get; set; }
-}
-
-public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
-{
-    public AppDbContext CreateDbContext(string[] args)
-    {
-        var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-        optionsBuilder.UseMySql("server=localhost;port=3306;database=socialdb;user=root;password=rootroot", 
-            new MySqlServerVersion(new Version(8, 0, 34))); // Adjust the version to match your MySQL version
-
-        return new AppDbContext(optionsBuilder.Options);
-    }
 }

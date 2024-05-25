@@ -46,10 +46,52 @@ CREATE TABLE `Tbl_Login` (
 ```
 # Step Five
 ## API Documentation
+- [Database Health Check](#health-check)
 - [Users Register](#users-register)
 - [Login](#login)
 
 
+ ### Health Check
+ #### Health means database connection can connect with server
+ ```js
+ GET http://localhost:8081/health
+ ```
+ #### Request
+ ##### No need
+
+ #### Response
+ ##### If database is healthy
+ ```js
+ {
+  "status": "Healthy",
+  "totalDuration": "00:00:00.6618975",
+  "entries": {
+    "mysql": {
+      "data": {},
+      "duration": "00:00:00.6553515",
+      "status": "Healthy",
+      "tags": []
+    }
+  }
+ }
+ ```
+ ##### If database is unhealthy
+ ```js
+ {
+  "status": "Unhealthy",
+  "totalDuration": "00:00:00.1178625",
+  "entries": {
+    "mysql": {
+       "data": {},
+       "description": "Unable to connect to any of the specified MySQL hosts.",
+       "duration": "00:00:00.1023617",
+       "exception": "Unable to connect to any of the specified MySQL hosts.",
+       "status": "Unhealthy",
+       "tags": []
+      }
+   }
+ }
+ ```
 
  ### Users Register
  ```js

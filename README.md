@@ -1,5 +1,5 @@
 # Step One
-- run docker-compose file using cmd 'docker-compose up -d'
+- run docker-compose.yml file using cmd 'docker-compose up -d'
   
 # Step Two
 - Change Stage value as 1 in appsetting.json(1 defined as default,2 defined as local)

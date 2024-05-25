@@ -52,31 +52,36 @@ CREATE TABLE `Tbl_Login` (
 
 
  ### Users Register
- 
+ ```js
+ POST http://localhost:8081/authapi/users/users-register
+ ```
  #### Request
-```json
-{
+ ```json
+ {
     "name" : "string",
     "email" : "string@gmail.com",
     "password" : "string",
     "dateOfBirth" : "2024-05-24",
     "profileImage" : ""
-}
-```
-#### Response
+ }
+ ```
+ #### Response
 ```json
 
 ```
 
-### Login
-#### Reqeust
-```json
-{
+ ### Login
+ ```js
+ POST http://localhost:8081/authapi/users/users-register
+ ```
+ #### Reqeust
+ ```json
+ {
     "email" : "string",
     "password" : "string"
-}
-```
-#### Response
-```json
+ }
+ ```
+ #### Response
+ ```json
 
-```
+ ```

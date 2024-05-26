@@ -77,6 +77,10 @@ namespace DatabaseService.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("ProfileImagePath")
                         .HasColumnType("longtext");
 

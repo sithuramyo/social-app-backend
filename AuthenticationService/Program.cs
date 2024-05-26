@@ -2,7 +2,9 @@ using System.Globalization;
 using System.Text;
 using AuthenticationService;
 using DatabaseService.AppContextModels;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
@@ -11,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
+using Shared.Enums;
 using Shared.Extensions;
 using Shared.Response;
 using Swashbuckle.AspNetCore.Filters;
@@ -22,6 +25,24 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+#region Custom app setting
+
+var stage = builder.Configuration.GetSection("Stage").Value;
+
+#endregion
+
+#region MyRegion
+
+var url = "http://0.0.0.0:8081";
+if ((int)EnumStageType.Local == Convert.ToInt32(stage))
+{
+    url = "http://localhost:5244";
+}
+
+#endregion
+
+builder.WebHost.UseUrls(url);
 
 #region Authentication
 
@@ -53,6 +74,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 #endregion
 
 #region Localization
+
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 const string defaultCulture = "en-US";
 
 var supportedCultures = new[]
@@ -66,11 +89,8 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.DefaultRequestCulture = new RequestCulture(defaultCulture);
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
-    options.FallBackToParentCultures = true;
-    options.FallBackToParentUICultures = true;
 });
 
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 #endregion
 
 #region Extension Service Configure
@@ -83,15 +103,19 @@ builder.Services.AddServices();
 
 #region Db Connection
 
-var server = "localhost";
-var dbName = "socialdb";
-var dbUser = "root";
-var dbPassword = "rootroot";
 // Use in docker 
-// var server = Environment.GetEnvironmentVariable("DB_HOST") ;
-// var dbName = Environment.GetEnvironmentVariable("DB_NAME");
-// var dbUser = Environment.GetEnvironmentVariable("DB_USER");
-// var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+var server = Environment.GetEnvironmentVariable("DB_HOST");
+var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+var dbUser = Environment.GetEnvironmentVariable("DB_USER");
+var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+
+if ((int)EnumStageType.Local == Convert.ToInt32(stage))
+{
+    server = "localhost";
+    dbName = "socialdb";
+    dbUser = "root";
+    dbPassword = "rootroot";
+}
 
 var connectionString =
     $"Server={server};port=3306;Database={dbName};User Id={dbUser};Password={dbPassword};CharSet=utf8;";
@@ -101,9 +125,16 @@ var connectionString =
 #region Mysql Connection
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql("server=127.0.0.1;port=3306;database=socialdb;User=root;password=rootroot;CharSet=utf8;", ServerVersion.AutoDetect(connectionString)
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)
     )
 );
+
+#endregion
+
+#region Health Check
+
+builder.Services.AddHealthChecks()
+    .AddMySql(connectionString);
 
 #endregion
 
@@ -126,6 +157,21 @@ Log.Logger = new LoggerConfiguration()
 
 #endregion
 
+#region Cors
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        b =>
+        {
+            b.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -134,13 +180,20 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 ResourcesExtension.Configure(app.Services.GetRequiredService<IStringLocalizer<ResponseDescription>>());
 
+app.MapHealthChecks("health", new HealthCheckOptions
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
 
 app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapGet("/", () => "Social App Backend AuthenticationApi");
 app.MapControllers();
 app.Run();

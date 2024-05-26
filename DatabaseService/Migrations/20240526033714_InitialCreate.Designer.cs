@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseService.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240521171046_InitialCreate")]
+    [Migration("20240526033714_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -80,6 +80,10 @@ namespace DatabaseService.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("ProfileImagePath")
                         .HasColumnType("longtext");
 
@@ -90,6 +94,28 @@ namespace DatabaseService.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tbl_Users");
+                });
+
+            modelBuilder.Entity("DatabaseService.DataModels.OtpLogs.OtpLog", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Otp")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("OtpExpires")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tbl_OtpLog");
                 });
 #pragma warning restore 612, 618
         }

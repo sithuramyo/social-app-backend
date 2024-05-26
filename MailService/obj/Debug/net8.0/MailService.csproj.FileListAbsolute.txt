@@ -1,13 +1,13 @@
-D:\Projects\Social App\social-app-backend\MailService\bin\Debug\net8.0\MailService.deps.json
-D:\Projects\Social App\social-app-backend\MailService\bin\Debug\net8.0\MailService.dll
-D:\Projects\Social App\social-app-backend\MailService\bin\Debug\net8.0\MailService.pdb
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.csproj.AssemblyReference.cache
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.AssemblyInfoInputs.cache
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.AssemblyInfo.cs
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.csproj.CoreCompileInputs.cache
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.sourcelink.json
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.dll
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\refint\MailService.dll
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\MailService.pdb
-D:\Projects\Social App\social-app-backend\MailService\obj\Debug\net8.0\ref\MailService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/bin/Debug/net8.0/MailService.deps.json
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/bin/Debug/net8.0/MailService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/bin/Debug/net8.0/MailService.pdb
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.csproj.AssemblyReference.cache
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.AssemblyInfoInputs.cache
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.AssemblyInfo.cs
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.csproj.CoreCompileInputs.cache
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.sourcelink.json
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/refint/MailService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/MailService.pdb
+/Users/sithuramyo/Documents/Project/social-app-backend/MailService/obj/Debug/net8.0/ref/MailService.dll

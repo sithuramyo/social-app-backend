@@ -1,6 +1,1 @@
-namespace AuthenticationService;
-
-public class GlobalUsings
-{
-    
-}
+global using AuthenticationService.Base;

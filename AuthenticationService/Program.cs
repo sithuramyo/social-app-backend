@@ -14,9 +14,9 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
 using Shared.Enums;
-using Shared.Extensions;
-using Shared.Response;
 using Swashbuckle.AspNetCore.Filters;
+using ResourcesExtension = AuthenticationService.ResourcesExtension;
+using ResponseDescription = AuthenticationService.ResponseDescription;
 
 var builder = WebApplication.CreateBuilder(args);
 

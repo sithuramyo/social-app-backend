@@ -132,4 +132,16 @@
   <data name="W0002" xml:space="preserve">
     <value>Login Invalid</value>
   </data>
+  <data name="E0001" xml:space="preserve">
+    <value>Fail to sent email</value>
+  </data>
+  <data name="W0001" xml:space="preserve">
+    <value>Duplicate data</value>
+  </data>
+  <data name="W0003" xml:space="preserve">
+    <value>Email duplicate</value>
+  </data>
+  <data name="W0004" xml:space="preserve">
+    <value>Otp code expired</value>
+  </data>
 </root>

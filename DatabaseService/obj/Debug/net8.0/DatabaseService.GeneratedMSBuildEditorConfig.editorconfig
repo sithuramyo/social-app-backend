@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DatabaseService
-build_property.ProjectDir = D:\Projects\Social App\social-app-backend\DatabaseService\
+build_property.ProjectDir = /Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

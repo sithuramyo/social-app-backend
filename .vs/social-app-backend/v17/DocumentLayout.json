@@ -7,6 +7,26 @@
       "RelativeMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|d:\\projects\\social app\\social-app-backend\\authenticationservice\\resourcesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\resourcesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADE505CF-2208-4FF3-941B-C1B90CE6B521}|Shared\\Shared.csproj|d:\\projects\\social app\\social-app-backend\\shared\\extensions\\resourcesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADE505CF-2208-4FF3-941B-C1B90CE6B521}|Shared\\Shared.csproj|solutionrelative:shared\\extensions\\resourcesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|d:\\projects\\social app\\social-app-backend\\authenticationservice\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|d:\\projects\\social app\\social-app-backend\\authenticationservice\\features\\logins\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\features\\logins\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|d:\\projects\\social app\\social-app-backend\\authenticationservice\\features\\logins\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\features\\logins\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|d:\\projects\\social app\\social-app-backend\\authenticationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -18,11 +38,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResourcesExtension.cs",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\Shared\\Extensions\\ResourcesExtension.cs",
+              "RelativeDocumentMoniker": "Shared\\Extensions\\ResourcesExtension.cs",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\Shared\\Extensions\\ResourcesExtension.cs",
+              "RelativeToolTip": "Shared\\Extensions\\ResourcesExtension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T07:54:37.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResourcesExtension.cs",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\ResourcesExtension.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\ResourcesExtension.cs",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\ResourcesExtension.cs",
+              "RelativeToolTip": "AuthenticationService\\ResourcesExtension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T07:54:32.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Features\\Logins\\LoginService.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Features\\Logins\\LoginService.cs",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Features\\Logins\\LoginService.cs",
+              "RelativeToolTip": "AuthenticationService\\Features\\Logins\\LoginService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwB8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T07:33:49.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Base\\BaseController.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Base\\BaseController.cs",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Base\\BaseController.cs",
+              "RelativeToolTip": "AuthenticationService\\Base\\BaseController.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAjwBAAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T07:24:48.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Features\\Logins\\LoginController.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Features\\Logins\\LoginController.cs",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Features\\Logins\\LoginController.cs",
+              "RelativeToolTip": "AuthenticationService\\Features\\Logins\\LoginController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T07:21:32.956Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,14 +117,14 @@
               "RelativeDocumentMoniker": "AuthenticationService\\Program.cs",
               "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Program.cs",
               "RelativeToolTip": "AuthenticationService\\Program.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAIwIoAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T06:49:50.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\appsettings.json",
               "RelativeDocumentMoniker": "AuthenticationService\\appsettings.json",
@@ -47,8 +132,7 @@
               "RelativeToolTip": "AuthenticationService\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-26T06:47:39.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T06:47:39.958Z"
             }
           ]
         }

@@ -49,6 +49,8 @@ CREATE TABLE `Tbl_Login` (
 - [Database Health Check](#health-check)
 - [Users Register](#users-register)
 - [Login](#login)
+- [GetOtp](#get-otp)
+- [ValidateOtp](#validate-otp)
 
 
  ### Health Check
@@ -128,7 +130,7 @@ CREATE TABLE `Tbl_Login` (
  ```js
  POST http://localhost:8081/authapi/login/users-login
  ```
- #### Reqeust
+ #### Request
  ```json
   {
     "email": "sithuramyo@gmail.com",
@@ -150,4 +152,50 @@ CREATE TABLE `Tbl_Login` (
         "isError": false
     }
   }
+ ```
+
+ ### Get Otp
+ ```js
+ POST http://localhost:8081/authapi/otp/get-otp
+ ```
+ #### Request
+ ```json
+ {
+  "email": "sithuramyo@gmail.com"
+ }
+ ```
+ #### Response
+ ```json
+ {
+    "otpExpires": 5,
+    "expireType": "Minute",
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "S0000",
+        "responseType": 1,
+        "isError": false
+    }
+  }
+ ```
+
+ ### Validate Otp
+ ```js
+ POST http://localhost:8081/authapi/otp/validate-otp
+ ```
+ #### Request
+ ```json
+ {
+  "otpCode": "7253"
+ }
+ ```
+ #### Response
+ ```json
+ {
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "S0000",
+        "responseType": 1,
+        "isError": false
+    }
+ }
  ```

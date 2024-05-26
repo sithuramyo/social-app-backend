@@ -42,8 +42,6 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Shared.pdb
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.csproj.AssemblyReference.cache
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescritpion.resources
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescritpion.en-us.resources
-/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescritpion.my-mm.resources
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.csproj.GenerateResource.cache
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.AssemblyInfoInputs.cache
@@ -84,87 +82,97 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/MimeKit.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailService.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailService.pdb
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\appsettings.Development.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\appsettings.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\AuthenticationService.exe
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\AuthenticationService.deps.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\AuthenticationService.runtimeconfig.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\AuthenticationService.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\AuthenticationService.pdb
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\en-US\AuthenticationService.resources.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\my-MM\AuthenticationService.resources.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\HealthChecks.MySql.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\HealthChecks.UI.Client.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\HealthChecks.UI.Core.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\BCrypt.Net-Next.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\MailKit.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Microsoft.OpenApi.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\MimeKit.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\MySqlConnector.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Scrutor.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Serilog.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Serilog.Sinks.File.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\TimeZoneConverter.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\DatabaseService.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\MailService.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Shared.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\DatabaseService.pdb
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\MailService.pdb
-D:\Projects\Social App\social-app-backend\AuthenticationService\bin\Debug\net8.0\Shared.pdb
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.csproj.AssemblyReference.cache
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.Resources.ResponseDescritpion.resources
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.Resources.ResponseDescription.en-US.resources
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.Resources.ResponseDescription.my-MM.resources
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.Resources.ResponseDescritpion.en-us.resources
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.Resources.ResponseDescritpion.my-mm.resources
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.csproj.GenerateResource.cache
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.AssemblyInfoInputs.cache
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.AssemblyInfo.cs
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.csproj.CoreCompileInputs.cache
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.MvcApplicationPartsAssemblyInfo.cs
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.MvcApplicationPartsAssemblyInfo.cache
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.sourcelink.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\en-US\AuthenticationService.resources.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\my-MM\AuthenticationService.resources.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\staticwebassets.build.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\staticwebassets.development.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\staticwebassets\msbuild.AuthenticationService.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\staticwebassets\msbuild.build.AuthenticationService.props
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AuthenticationService.props
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AuthenticationService.props
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\scopedcss\bundle\AuthenticationService.styles.css
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\Authenti.B4DABC11.Up2Date
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\refint\AuthenticationService.dll
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.pdb
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\AuthenticationService.genruntimeconfig.cache
-D:\Projects\Social App\social-app-backend\AuthenticationService\obj\Debug\net8.0\ref\AuthenticationService.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/appsettings.Development.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/appsettings.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/AuthenticationService.exe
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/AuthenticationService.deps.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/AuthenticationService.runtimeconfig.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/AuthenticationService.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/AuthenticationService.pdb
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/en-US/AuthenticationService.resources.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/my-MM/AuthenticationService.resources.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.MySql.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.UI.Client.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.UI.Core.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/BCrypt.Net-Next.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailKit.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Localization.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Localization.Abstractions.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/MimeKit.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/MySqlConnector.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Newtonsoft.Json.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Scrutor.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Serilog.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Serilog.Sinks.File.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.Abstractions.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/System.Linq.Dynamic.Core.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/TimeZoneConverter.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/DatabaseService.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailService.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Shared.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/DatabaseService.pdb
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailService.pdb
+D:/Projects/Social App/social-app-backend/AuthenticationService/bin/Debug/net8.0/Shared.pdb
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.csproj.AssemblyReference.cache
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescritpion.resources
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescription.en-US.resources
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescription.my-MM.resources
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescritpion.en-us.resources
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.Resources.ResponseDescritpion.my-mm.resources
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.csproj.GenerateResource.cache
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.AssemblyInfoInputs.cache
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.AssemblyInfo.cs
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.csproj.CoreCompileInputs.cache
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.MvcApplicationPartsAssemblyInfo.cs
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.MvcApplicationPartsAssemblyInfo.cache
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.sourcelink.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/en-US/AuthenticationService.resources.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/my-MM/AuthenticationService.resources.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/staticwebassets.build.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/staticwebassets.development.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/staticwebassets/msbuild.AuthenticationService.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/staticwebassets/msbuild.build.AuthenticationService.props
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AuthenticationService.props
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AuthenticationService.props
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/scopedcss/bundle/AuthenticationService.styles.css
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/Authenti.B4DABC11.Up2Date
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/refint/AuthenticationService.dll
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.pdb
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/AuthenticationService.genruntimeconfig.cache
+D:/Projects/Social App/social-app-backend/AuthenticationService/obj/Debug/net8.0/ref/AuthenticationService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Google.Apis.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Google.Apis.Auth.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Google.Apis.Core.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/Google.Apis.Drive.v3.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/System.CodeDom.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/System.Management.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Management.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/GoogleDriveService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/GoogleDriveService.pdb
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/secret.json

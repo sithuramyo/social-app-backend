@@ -22,6 +22,7 @@ public class ResponseConstants
     public const string W0002 = "W0002"; //Users not found
     public const string W0003 = "W0003"; //Email duplicate
     public const string W0004 = "W0004"; //Otp code expire
+    public const string W0005 = "W0005"; //Invalid base64
 
     #endregion
 

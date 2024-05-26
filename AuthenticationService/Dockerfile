@@ -10,6 +10,7 @@ COPY ["AuthenticationService/AuthenticationService.csproj", "AuthenticationServi
 COPY ["Shared/Shared.csproj", "Shared/"]
 COPY ["DatabaseService/DatabaseService.csproj", "DatabaseService/"]
 COPY ["MailService/MailService.csproj", "MailService/"]
+COPY ["GoogleDriveService/GoogleDriveService.csproj", "GoogleDriveService/"]
 RUN dotnet restore "AuthenticationService/AuthenticationService.csproj"
 COPY . .
 WORKDIR "/src/AuthenticationService"

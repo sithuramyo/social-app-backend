@@ -29,6 +29,9 @@
               "/Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/DatabaseService.csproj": {
                 "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/DatabaseService.csproj"
               },
+              "/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/GoogleDriveService.csproj": {
+                "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/GoogleDriveService.csproj"
+              },
               "/Users/sithuramyo/Documents/Project/social-app-backend/MailService/MailService.csproj": {
                 "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/MailService/MailService.csproj"
               },
@@ -179,6 +182,65 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/sithuramyo/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/GoogleDriveService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/GoogleDriveService.csproj",
+        "projectName": "GoogleDriveService",
+        "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/GoogleDriveService.csproj",
+        "packagesPath": "/Users/sithuramyo/.nuget/packages/",
+        "outputPath": "/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sithuramyo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Apis.Drive.v3": {
+              "target": "Package",
+              "version": "[1.68.0.3416, )"
             }
           },
           "imports": [

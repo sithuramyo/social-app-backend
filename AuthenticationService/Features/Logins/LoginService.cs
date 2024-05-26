@@ -20,12 +20,18 @@ public class LoginService : ILoginService
     public async Task<LoginResponseModel> Login(LoginRequestModel request,CancellationToken ct)
     {
         LoginResponseModel model = new();
-        if (request.Email.IsNullOrEmpty() || request.Password.IsNullOrEmpty())
+        if (request.Email.IsNullOrEmpty() && request.Password.IsNullOrEmpty())
         {
             model.Response.Set(ResponseConstants.W0000);
             return model;
         }
 
+        if (!request.Email.IsValidEmail())
+        {
+            model.Response.Set(ResponseConstants.W0003);
+            return model;
+        }
+        
         var users = await _context.Users.FirstOrDefaultAsync(x => x.Email == request.Email && !x.IsDeleted,ct);
         if (users is null)
         {

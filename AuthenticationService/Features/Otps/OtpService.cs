@@ -31,6 +31,12 @@ public class OtpService : IOtpService
             return model;
         }
 
+        if (!request.Email.IsValidEmail())
+        {
+            model.Response.Set(ResponseConstants.W0003);
+            return model;
+        }
+        
         var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == request.Email && !x.IsDeleted, ct);
 
         if (user is null)

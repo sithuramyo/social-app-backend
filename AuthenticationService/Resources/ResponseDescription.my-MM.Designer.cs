@@ -98,5 +98,11 @@ namespace AuthenticationService.Resources {
                 return ResourceManager.GetString("W0004", resourceCulture);
             }
         }
+        
+        internal static string W0005 {
+            get {
+                return ResourceManager.GetString("W0005", resourceCulture);
+            }
+        }
     }
 }

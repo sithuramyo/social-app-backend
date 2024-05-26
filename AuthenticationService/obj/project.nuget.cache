@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2V2um/XxfLl9/jLlPnRq3zN/tcmRprxfeybmjdx0xmuz09h08SYFp5elUrwPLZAu1cAUQLPNg8hSgLDRt1uUzg==",
+  "dgSpecHash": "LJuWmtQEmlryZKt4OWrDGq3SVrv3tspVdOtXQWDzUgbjRO4lSt/kQy8l9r0TnU/+OldthD6YAMkWrgCtVrmKfw==",
   "success": true,
   "projectFilePath": "/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/AuthenticationService.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,10 @@
     "/Users/sithuramyo/.nuget/packages/aspnetcore.healthchecks.ui.core/8.0.1/aspnetcore.healthchecks.ui.core.8.0.1.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/bouncycastle.cryptography/2.3.1/bouncycastle.cryptography.2.3.1.nupkg.sha512",
+    "/Users/sithuramyo/.nuget/packages/google.apis/1.68.0/google.apis.1.68.0.nupkg.sha512",
+    "/Users/sithuramyo/.nuget/packages/google.apis.auth/1.68.0/google.apis.auth.1.68.0.nupkg.sha512",
+    "/Users/sithuramyo/.nuget/packages/google.apis.core/1.68.0/google.apis.core.1.68.0.nupkg.sha512",
+    "/Users/sithuramyo/.nuget/packages/google.apis.drive.v3/1.68.0.3416/google.apis.drive.v3.1.68.0.3416.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/mailkit/4.6.0/mailkit.4.6.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.0/microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/microsoft.aspnetcore.openapi/8.0.5/microsoft.aspnetcore.openapi.8.0.5.nupkg.sha512",
@@ -54,10 +58,12 @@
     "/Users/sithuramyo/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
+    "/Users/sithuramyo/.nuget/packages/system.codedom/7.0.0/system.codedom.7.0.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/system.formats.asn1/8.0.0/system.formats.asn1.8.0.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/system.identitymodel.tokens.jwt/7.0.3/system.identitymodel.tokens.jwt.7.0.3.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/system.linq.dynamic.core/1.3.8/system.linq.dynamic.core.1.3.8.nupkg.sha512",
+    "/Users/sithuramyo/.nuget/packages/system.management/7.0.2/system.management.7.0.2.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/system.security.cryptography.pkcs/8.0.0/system.security.cryptography.pkcs.8.0.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/timezoneconverter/6.1.0/timezoneconverter.6.1.0.nupkg.sha512"

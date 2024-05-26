@@ -139,9 +139,12 @@
     <value>အချက်အလတ်တူညီနေပါသည်</value>
   </data>
   <data name="W0003" xml:space="preserve">
-    <value>အီးမေးလ်တူညီနေပါသည်</value>
+    <value>အီးမေးလ်မှားယွင်းနေပါသည်</value>
   </data>
   <data name="W0004" xml:space="preserve">
     <value>သက်တမ်းကုန်ဆုံးနေပါသည်</value>
+  </data>
+  <data name="W0005" xml:space="preserve">
+    <value>Invalid Base64String</value>
   </data>
 </root>

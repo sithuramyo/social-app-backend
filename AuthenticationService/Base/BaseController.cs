@@ -24,10 +24,15 @@ public class BaseController : ControllerBase
         return Ok(model);
     }
     
-    protected IActionResult SystemError<T>(T model, Exception ex) where T : BaseSubResponseModel
+    protected IActionResult SystemError<T>(T obj, Exception ex) where T : BaseSubResponseModel
     {
         LogException(ex);
-        model.Response.Set(ResponseConstants.E0000);
+        obj.Response.Set(ResponseConstants.E0000);
+        var jobject = JObject.Parse(obj.ToJson());
+        var respDesp = jobject["Response"]["ResponseDescription"]
+            .ToString().GetResource();
+        jobject["Response"]["ResponseDescription"] = respDesp;
+        var model = jobject.ToString().ToObject<T>();
         return Ok(model);
     }
     

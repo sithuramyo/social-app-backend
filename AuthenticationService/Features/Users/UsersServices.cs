@@ -3,21 +3,22 @@ using DatabaseService.AppContextModels;
 using DatabaseService.ChangeModels;
 using DatabaseService.DataModels.Authentication;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using Shared.Constants;
 using Shared.Extensions;
+using Shared.Models.ForgetPassword;
 using Shared.Models.Users;
-using Shared.Response;
 
 namespace AuthenticationService.Features.Users;
 
 public class UsersServices : IUsersServices
 {
     private readonly AppDbContext _context;
+    private readonly UploadService _uploadService;
 
-    public UsersServices(AppDbContext context)
+    public UsersServices(AppDbContext context, UploadService uploadService)
     {
         _context = context;
+        _uploadService = uploadService;
     }
 
     public async Task<UsersRegisterResponseModel> UsersRegister(UsersRegisterRequestModel request, CancellationToken ct)
@@ -36,12 +37,23 @@ public class UsersServices : IUsersServices
             return model;
         }
 
+        if (!request.ProfileImage.IsValidBase64())
+        {
+            model.Response.Set(ResponseConstants.W0005);
+            return model;
+        }
+
         var isExist = await _context.Users.AnyAsync(x => x.Email == request.Email && !x.IsDeleted, ct);
 
         if (isExist)
         {
             model.Response.Set(ResponseConstants.W0001);
             return model;
+        }
+
+        if (request.ProfileImage.IsNotNullOrEmpty())
+        {
+            request.ProfileImage = await _uploadService.SaveProfileImage(request.ProfileImage, request.Name);
         }
 
         request.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
@@ -81,6 +93,46 @@ public class UsersServices : IUsersServices
         model.RefreshToken = refreshTokenModel.Token;
         model.RefreshTokenExpires = refreshTokenModel.ExpireCount * 24;
         model.ExpireType = ExpireConstants.Hour;
+        model.Response.Set(ResponseConstants.S0000);
+        return model;
+    }
+
+    public async Task<ForgetPasswordResponseModel> ForgetPassword(ForgetPasswordRequestModel request,
+        CancellationToken ct)
+    {
+        ForgetPasswordResponseModel model = new();
+        if (request.Email.IsNullOrEmpty() && request.Password.IsNullOrEmpty())
+        {
+            model.Response.Set(ResponseConstants.W0000);
+            return model;
+        }
+
+        if (!request.Email.IsValidEmail())
+        {
+            model.Response.Set(ResponseConstants.W0003);
+            return model;
+        }
+
+        var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == request.Email && !x.IsDeleted, ct);
+
+        if (user is null)
+        {
+            model.Response.Set(ResponseConstants.W0002);
+            return model;
+        }
+
+        request.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
+
+        user.Password = request.Password;
+        _context.Users.Update(user);
+        var result = await _context.SaveChangesAsync(ct);
+
+        if (result <= 0)
+        {
+            model.Response.Set(ResponseConstants.E0000);
+            return model;
+        }
+
         model.Response.Set(ResponseConstants.S0000);
         return model;
     }

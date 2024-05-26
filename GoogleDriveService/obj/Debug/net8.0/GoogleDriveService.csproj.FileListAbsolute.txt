@@ -1,0 +1,13 @@
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/bin/Debug/net8.0/GoogleDriveService.deps.json
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/bin/Debug/net8.0/GoogleDriveService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/bin/Debug/net8.0/GoogleDriveService.pdb
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.csproj.AssemblyReference.cache
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.AssemblyInfoInputs.cache
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.AssemblyInfo.cs
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.csproj.CoreCompileInputs.cache
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.sourcelink.json
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/refint/GoogleDriveService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/GoogleDriveService.pdb
+/Users/sithuramyo/Documents/Project/social-app-backend/GoogleDriveService/obj/Debug/net8.0/ref/GoogleDriveService.dll

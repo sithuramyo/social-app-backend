@@ -1,5 +1,6 @@
 using AuthenticationService.Base;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Models.ForgetPassword;
 using Shared.Models.Users;
 
 namespace AuthenticationService.Features.Users;
@@ -22,6 +23,22 @@ public class UsersController : BaseController
         try
         {
             model = await _services.UsersRegister(request, ct);
+        }
+        catch (Exception ex)
+        {
+            return SystemError(model, ex);
+        }
+
+        return OkWithLocalize(model);
+    }
+
+    [HttpPost("forget-password")]
+    public async Task<IActionResult> ForgetPassword(ForgetPasswordRequestModel request, CancellationToken ct)
+    {
+        ForgetPasswordResponseModel model = new();
+        try
+        {
+            model = await _services.ForgetPassword(request, ct);
         }
         catch (Exception ex)
         {

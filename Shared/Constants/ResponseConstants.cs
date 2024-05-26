@@ -10,17 +10,13 @@ public class ResponseConstants
 
     #region Information
 
-    public const string I0000 = "I0000"; //404
-    public const string I0001 = "I0001"; //403
+    public const string I0000 = "I0000";
 
     #endregion
 
     #region Warning
 
     public const string W0000 = "W0000"; //Data is nothing
-    public const string W0001 = "W0001"; //Duplicate data
-    public const string W0002 = "W0002"; //Users not found
-    public const string W0003 = "W0003"; //Email duplicate
 
     #endregion
 

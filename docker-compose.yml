@@ -10,39 +10,23 @@ services:
       MYSQL_USER: socialuser
       MYSQL_PASSWORD: socialpassword
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
-      - ./sql-scripts:/docker-entrypoint-initdb.d
       - db_data:/var/lib/mysql
-
-  apigatewayservice:
-    container_name: api-gateway-app
-    build:
-      context: .
-      dockerfile: ApiGatewayService/Dockerfile
-    ports:
-      - "8080:8080"
-    depends_on:
-      - socialbackenddb
-    environment:
-      DB_HOST: socialbackenddb
-      DB_PORT: 3307
-      DB_NAME: socialdb
-      DB_USER: socialuser
-      DB_PASSWORD: socialpassword
 
   authenticationservice:
     container_name: social-backend-app
+    image: authenticationservice
     build:
       context: .
       dockerfile: AuthenticationService/Dockerfile
     ports:
-      - "8081:8081"
+      - "8080:80"
     depends_on:
       - socialbackenddb
     environment:
-      DB_HOST: social-backend-db
-      DB_PORT: 3307
+      DB_HOST: socialbackenddb
+      DB_PORT: 3306
       DB_NAME: socialdb
       DB_USER: socialuser
       DB_PASSWORD: socialpassword

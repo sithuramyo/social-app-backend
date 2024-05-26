@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\Social App\\social-app-backend\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|d:\\projects\\social app\\social-app-backend\\authenticationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC22CE67-6E20-4608-B4E8-46AC9115238D}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{415B9D21-17E7-41BF-AFBB-46C193157E34}|ApiGatewayService\\ApiGatewayService.csproj|d:\\projects\\social app\\social-app-backend\\apigatewayservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{415B9D21-17E7-41BF-AFBB-46C193157E34}|ApiGatewayService\\ApiGatewayService.csproj|solutionrelative:apigatewayservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{415B9D21-17E7-41BF-AFBB-46C193157E34}|ApiGatewayService\\ApiGatewayService.csproj|d:\\projects\\social app\\social-app-backend\\apigatewayservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{415B9D21-17E7-41BF-AFBB-46C193157E34}|ApiGatewayService\\ApiGatewayService.csproj|solutionrelative:apigatewayservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{415B9D21-17E7-41BF-AFBB-46C193157E34}|ApiGatewayService\\ApiGatewayService.csproj|d:\\projects\\social app\\social-app-backend\\apigatewayservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{415B9D21-17E7-41BF-AFBB-46C193157E34}|ApiGatewayService\\ApiGatewayService.csproj|solutionrelative:apigatewayservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Program.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Program.cs",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\AuthenticationService\\Program.cs",
+              "RelativeToolTip": "AuthenticationService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T05:38:55.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\Program.cs",
+              "RelativeDocumentMoniker": "ApiGatewayService\\Program.cs",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\Program.cs",
+              "RelativeToolTip": "ApiGatewayService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T04:40:44.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ApiGatewayService\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ApiGatewayService\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-26T04:36:28.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\appsettings.json",
+              "RelativeDocumentMoniker": "ApiGatewayService\\appsettings.json",
+              "ToolTip": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\appsettings.json",
+              "RelativeToolTip": "ApiGatewayService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-26T04:35:58.12Z"
             }
           ]
         }

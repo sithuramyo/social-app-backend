@@ -12,7 +12,6 @@ public static class ChangeModel
         {
             UserId = Guid.NewGuid().ToString(),
             Name = request.Name,
-            Password = request.Password,
             Email = request.Email,
             DateOfBirth = request.DateOfBirth,
             ProfileImagePath = request.ProfileImage,

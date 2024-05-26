@@ -16,12 +16,12 @@ public class UsersController : BaseController
     }
 
     [HttpPost("users-register")]
-    public async Task<IActionResult> UsersRegister(UsersRegisterRequestModel request, CancellationToken ct)
+    public async Task<IActionResult> UsersRegister(UsersRegisterRequestModel request,CancellationToken ct)
     {
         UsersRegisterResponseModel model = new();
         try
         {
-            model = await _services.UsersRegister(request, ct);
+            model = await _services.UsersRegister(request,ct);
         }
         catch (Exception ex)
         {

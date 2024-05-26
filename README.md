@@ -44,6 +44,17 @@ CREATE TABLE `Tbl_Login` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 ```
+  For Tbl_OtpLog
+```sql
+CREATE TABLE `Tbl_OtpLog` (
+  `Id` bigint NOT NULL AUTO_INCREMENT,
+  `Otp` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `UserId` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `OtpExpires` datetime(6) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
+
 # Step Five
 ## API Documentation
 - [Database Health Check](#health-check)

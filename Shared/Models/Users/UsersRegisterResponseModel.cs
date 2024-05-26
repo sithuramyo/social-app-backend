@@ -9,4 +9,5 @@ public class UsersRegisterResponseModel : BaseSubResponseModel
     public int AccessTokenExpires { get; set; }
     public string RefreshToken { get; set; }
     public int RefreshTokenExpires { get; set; }
+    public string ExpireType { get; set; }
 }

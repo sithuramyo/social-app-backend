@@ -21,12 +21,14 @@ public class ResponseConstants
     public const string W0001 = "W0001"; //Duplicate data
     public const string W0002 = "W0002"; //Users not found
     public const string W0003 = "W0003"; //Email duplicate
+    public const string W0004 = "W0004"; //Otp code expire
 
     #endregion
 
     #region Error
 
-    public const string E0000 = "E0000";
+    public const string E0000 = "E0000"; //Unexpected error
+    public const string E0001 = "E0001"; //Fail email send
 
 
     #endregion

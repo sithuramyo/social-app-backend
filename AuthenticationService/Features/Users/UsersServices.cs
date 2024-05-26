@@ -75,11 +75,12 @@ public class UsersServices : IUsersServices
             return model;
         }
 
-        model.AccessTokenType = AuthenticationConstant.AccessTokenType;
+        model.AccessTokenType = AuthenticationConstants.AccessTokenType;
         model.AccessToken = accessTokenModel.AccessToken;
         model.AccessTokenExpires = accessTokenModel.ExpireCount * 24;
         model.RefreshToken = refreshTokenModel.Token;
         model.RefreshTokenExpires = refreshTokenModel.ExpireCount * 24;
+        model.ExpireType = ExpireConstants.Hour;
         model.Response.Set(ResponseConstants.S0000);
         return model;
     }

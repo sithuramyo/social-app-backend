@@ -7,7 +7,7 @@ namespace MailService.MailSetting;
 
 public class SocialMailService : ISocialMailService
 {
-    public async Task<bool> SendAsync(SocialEmailModel model)
+    public async Task<bool> SendAsync(SocialEmailModel model,CancellationToken ct)
     {
         var success = false;
         try
@@ -19,9 +19,9 @@ public class SocialMailService : ISocialMailService
             email.Body = new TextPart(TextFormat.Html) {Text = model.Body};
 
             using var smtp = new SmtpClient();
-            await smtp.ConnectAsync(model.Host,587,SecureSocketOptions.StartTls);
-            await smtp.AuthenticateAsync(model.UserName,model.Password);
-            await smtp.SendAsync(email);
+            await smtp.ConnectAsync(model.Host,587,SecureSocketOptions.StartTls,ct);
+            await smtp.AuthenticateAsync(model.UserName,model.Password,ct);
+            await smtp.SendAsync(email,ct);
             // ReSharper disable once DisposeOnUsingVariable
             smtp.Dispose();
             success = true;

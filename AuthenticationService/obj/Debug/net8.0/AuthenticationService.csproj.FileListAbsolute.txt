@@ -79,3 +79,8 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.MySql.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.UI.Client.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/HealthChecks.UI.Core.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailKit.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/MimeKit.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailService.dll
+/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/bin/Debug/net8.0/MailService.pdb

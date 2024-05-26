@@ -12,6 +12,7 @@
           "AspNetCore.HealthChecks.UI.Client": "8.0.1",
           "BCrypt.Net-Next": "4.0.3",
           "DatabaseService": "1.0.0",
+          "MailService": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.5",
           "Microsoft.EntityFrameworkCore": "8.0.5",
@@ -77,6 +78,25 @@
           "lib/net6.0/BCrypt.Net-Next.dll": {
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.0.3.0"
+          }
+        }
+      },
+      "BouncyCastle.Cryptography/2.3.1": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.3.1.17862"
+          }
+        }
+      },
+      "MailKit/4.6.0": {
+        "dependencies": {
+          "MimeKit": "4.6.0"
+        },
+        "runtime": {
+          "lib/net8.0/MailKit.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
           }
         }
       },
@@ -337,6 +357,18 @@
           }
         }
       },
+      "MimeKit/4.6.0": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.3.1",
+          "System.Security.Cryptography.Pkcs": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/MimeKit.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
+          }
+        }
+      },
       "MySqlConnector/2.3.5": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.1"
@@ -461,6 +493,7 @@
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.0": {},
+      "System.Formats.Asn1/8.0.0": {},
       "System.IdentityModel.Tokens.Jwt/7.0.3": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "7.0.3",
@@ -481,6 +514,11 @@
           }
         }
       },
+      "System.Security.Cryptography.Pkcs/8.0.0": {
+        "dependencies": {
+          "System.Formats.Asn1": "8.0.0"
+        }
+      },
       "System.Text.Json/4.7.2": {},
       "TimeZoneConverter/6.1.0": {
         "runtime": {
@@ -499,6 +537,14 @@
         },
         "runtime": {
           "DatabaseService.dll": {}
+        }
+      },
+      "MailService/1.0.0": {
+        "dependencies": {
+          "MailKit": "4.6.0"
+        },
+        "runtime": {
+          "MailService.dll": {}
         }
       },
       "Shared/1.0.0": {
@@ -548,6 +594,20 @@
       "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
       "path": "bcrypt.net-next/4.0.3",
       "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
+    "BouncyCastle.Cryptography/2.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-buwoISwecYke3CmgG1AQSg+sNZjJeIb93vTAtJiHZX35hP/teYMxsfg0NDXGUKjGx6BKBTNKc77O2M3vKvlXZQ==",
+      "path": "bouncycastle.cryptography/2.3.1",
+      "hashPath": "bouncycastle.cryptography.2.3.1.nupkg.sha512"
+    },
+    "MailKit/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EJ1L2AtoO9nGZz2AKl2WGGw4pLIpkgEwzpczmZWBLqX0m33ueVA+CJYd9hg52XOvvEj+w5PVzB7yy26E0WHzKQ==",
+      "path": "mailkit/4.6.0",
+      "hashPath": "mailkit.4.6.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.0": {
       "type": "package",
@@ -766,6 +826,13 @@
       "path": "microsoft.openapi/1.4.3",
       "hashPath": "microsoft.openapi.1.4.3.nupkg.sha512"
     },
+    "MimeKit/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M4jddPQNSClTzHE+HnfrtN93mCXSYF8KewWUTwzXgl49ajzUh8hz/UY4CAnRQR4YJF3lBY5P+r+73VXZAGKafw==",
+      "path": "mimekit/4.6.0",
+      "hashPath": "mimekit.4.6.0.nupkg.sha512"
+    },
     "MySqlConnector/2.3.5": {
       "type": "package",
       "serviceable": true,
@@ -857,6 +924,13 @@
       "path": "system.diagnostics.diagnosticsource/8.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512"
     },
+    "System.Formats.Asn1/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AJukBuLoe3QeAF+mfaRKQb2dgyrvt340iMBHYv+VdBzCUM06IxGlvl0o/uPOS7lHnXPN6u8fFRHSHudx5aTi8w==",
+      "path": "system.formats.asn1/8.0.0",
+      "hashPath": "system.formats.asn1.8.0.0.nupkg.sha512"
+    },
     "System.IdentityModel.Tokens.Jwt/7.0.3": {
       "type": "package",
       "serviceable": true,
@@ -870,6 +944,13 @@
       "sha512": "sha512-qEBOJO6z4Ps8HE4EM3S0tvBnshgE6mpTd7sv2kAdHaMNkIRIZ+dttvaC9NnL5SFN8maHEvsW0h2xJ7X0Vp9b6Q==",
       "path": "system.linq.dynamic.core/1.3.8",
       "hashPath": "system.linq.dynamic.core.1.3.8.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ULmp3xoOwNYjOYp4JZ2NK/6NdTgiN1GQXzVVN1njQ7LOZ0d0B9vyMnhyqbIi9Qw4JXj1JgCsitkTShboHRx7Eg==",
+      "path": "system.security.cryptography.pkcs/8.0.0",
+      "hashPath": "system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
     },
     "System.Text.Json/4.7.2": {
       "type": "package",
@@ -886,6 +967,11 @@
       "hashPath": "timezoneconverter.6.1.0.nupkg.sha512"
     },
     "DatabaseService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MailService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

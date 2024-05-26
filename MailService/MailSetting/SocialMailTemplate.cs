@@ -2,7 +2,7 @@ namespace MailService.MailSetting;
 
 public class SocialMailTemplate
 {
-    public static string EmailTemplateForOtp(string otpCode)
+    public static string EmailTemplateForOtp(string otpCode,string title)
     {
         return $$"""
                  <!DOCTYPE html>
@@ -59,7 +59,7 @@ public class SocialMailTemplate
                      <div class="mainContainer">
                          <div class="subContainer">
                              <div class="headerContainer">
-                                 <a href="" class="headerTitle">Title Will Here</a>
+                                 <a href="" class="headerTitle">{{title}}</a>
                              </div>
                              <p >Thank you for choosing our brand. Use the following OTP to complete your Sign Up. OTP will be expire in
                                  5 minutes</p>

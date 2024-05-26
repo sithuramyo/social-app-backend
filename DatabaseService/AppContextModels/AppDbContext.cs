@@ -1,4 +1,5 @@
 using DatabaseService.DataModels.Authentication;
+using DatabaseService.DataModels.OtpLogs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -16,11 +17,24 @@ public class AppDbContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseMySql("server=social-backend-db;port=3307;database=socialdb;User=socialuser;password=socialpassword;", 
-                ServerVersion.AutoDetect("server=localhost;port=3307;database=socialdb;User=socialuser;password=socialpassword")); // Adjust the version to match your MySQL version
+            optionsBuilder.UseMySql("server=localhost;port=3306;database=socialdb;User=root;password=rootroot;", 
+                ServerVersion.AutoDetect("server=localhost;port=3306;database=socialdb;User=root;password=rootroot")); // Adjust the version to match your MySQL version
         }
     }
         
     public DbSet<Users> Users { get; set; }
     public DbSet<Login> Login { get; set; }
+    public DbSet<OtpLog> OtpLogs { get; set; }
+}
+
+public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+{
+    public AppDbContext CreateDbContext(string[] args)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+        optionsBuilder.UseMySql("server=localhost;port=3306;database=socialdb;user=root;password=rootroot", 
+            ServerVersion.AutoDetect("server=localhost;port=3306;database=socialdb;User=root;password=rootroot")); // Adjust the version to match your MySQL version
+
+        return new AppDbContext(optionsBuilder.Options);
+    }
 }

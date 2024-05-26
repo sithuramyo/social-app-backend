@@ -1,4 +1,5 @@
 using AuthenticationService.Features.Logins;
+using AuthenticationService.Features.Otps;
 using AuthenticationService.Features.Users;
 using MailService.MailSetting;
 
@@ -17,7 +18,7 @@ public static class ServicesInjection
     {
         services.AddScoped<IUsersServices, UsersServices>();
         services.AddScoped<ILoginService, LoginService>();
-        
+        services.AddScoped<IOtpService, OtpService>();
         //Email injection
         services.AddTransient<ISocialMailService, SocialMailService>();
     }

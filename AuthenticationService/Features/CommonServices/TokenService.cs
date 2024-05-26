@@ -25,9 +25,9 @@ public class TokenService
         JwtTokenModel model = new();
         var claims = new List<Claim>
         {
-            new(AuthenticationConstant.UserId, userId),
+            new(AuthenticationConstants.UserId, userId),
         };
-        var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(AuthenticationConstant.Key));
+        var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(AuthenticationConstants.Key));
 
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
         model.AccessTokenExpires = DateTime.Now.AddDays(7);

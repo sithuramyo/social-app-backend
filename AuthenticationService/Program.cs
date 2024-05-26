@@ -76,12 +76,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 #region Localization
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-const string defaultCulture = "en-US";
+const string defaultCulture = "en-us";
 
 var supportedCultures = new[]
 {
     new CultureInfo(defaultCulture),
-    new CultureInfo("my-MM")
+    new CultureInfo("my-mm")
 };
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>

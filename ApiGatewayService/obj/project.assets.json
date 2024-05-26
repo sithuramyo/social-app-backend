@@ -92,24 +92,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/sithuramyo/.nuget/packages/": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/ApiGatewayService.csproj",
+      "projectUniqueName": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
       "projectName": "ApiGatewayService",
-      "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/ApiGatewayService.csproj",
-      "packagesPath": "/Users/sithuramyo/.nuget/packages/",
-      "outputPath": "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/",
+      "projectPath": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/sithuramyo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -122,6 +129,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -152,7 +164,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/sithuramyo/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

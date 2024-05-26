@@ -28,3 +28,33 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/Debug/net8.0/ApiGatewayService.genruntimeconfig.cache
 /Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/Debug/net8.0/ref/ApiGatewayService.dll
 /Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/Debug/net8.0/ApiGatewayService.sourcelink.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\appsettings.Development.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\appsettings.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\ApiGatewayService.exe
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\ApiGatewayService.deps.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\ApiGatewayService.runtimeconfig.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\ApiGatewayService.dll
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\ApiGatewayService.pdb
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\System.IO.Hashing.dll
+D:\Projects\Social App\social-app-backend\ApiGatewayService\bin\Debug\net8.0\Yarp.ReverseProxy.dll
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.csproj.AssemblyReference.cache
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.AssemblyInfoInputs.cache
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.AssemblyInfo.cs
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.csproj.CoreCompileInputs.cache
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.sourcelink.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\staticwebassets.build.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\staticwebassets.development.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\staticwebassets\msbuild.ApiGatewayService.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\staticwebassets\msbuild.build.ApiGatewayService.props
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ApiGatewayService.props
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ApiGatewayService.props
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\scopedcss\bundle\ApiGatewayService.styles.css
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatew.02D6EE1C.Up2Date
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.dll
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\refint\ApiGatewayService.dll
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.pdb
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ApiGatewayService.genruntimeconfig.cache
+D:\Projects\Social App\social-app-backend\ApiGatewayService\obj\Debug\net8.0\ref\ApiGatewayService.dll

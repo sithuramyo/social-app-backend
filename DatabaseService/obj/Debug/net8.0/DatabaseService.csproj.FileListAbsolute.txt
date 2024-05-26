@@ -16,3 +16,21 @@
 /Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/obj/Debug/net8.0/Database.0EBD2A6D.Up2Date
 /Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/bin/Debug/net8.0/DatabaseService.runtimeconfig.json
 /Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/obj/Debug/net8.0/DatabaseService.genruntimeconfig.cache
+D:\Projects\Social App\social-app-backend\DatabaseService\bin\Debug\net8.0\DatabaseService.deps.json
+D:\Projects\Social App\social-app-backend\DatabaseService\bin\Debug\net8.0\DatabaseService.runtimeconfig.json
+D:\Projects\Social App\social-app-backend\DatabaseService\bin\Debug\net8.0\DatabaseService.dll
+D:\Projects\Social App\social-app-backend\DatabaseService\bin\Debug\net8.0\DatabaseService.pdb
+D:\Projects\Social App\social-app-backend\DatabaseService\bin\Debug\net8.0\Shared.dll
+D:\Projects\Social App\social-app-backend\DatabaseService\bin\Debug\net8.0\Shared.pdb
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.csproj.AssemblyReference.cache
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.AssemblyInfoInputs.cache
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.AssemblyInfo.cs
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.csproj.CoreCompileInputs.cache
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.sourcelink.json
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\Database.0EBD2A6D.Up2Date
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.dll
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\refint\DatabaseService.dll
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.pdb
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\DatabaseService.genruntimeconfig.cache
+D:\Projects\Social App\social-app-backend\DatabaseService\obj\Debug\net8.0\ref\DatabaseService.dll

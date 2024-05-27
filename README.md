@@ -1,3 +1,11 @@
+# Using tech stack
+- dotnet 8
+- EF core 8
+- mysql
+- smtp
+- google drive api
+
+
 # Step One
 - run docker-compose.yml file using cmd 'docker-compose up -d'
   

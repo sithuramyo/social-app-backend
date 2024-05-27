@@ -70,6 +70,7 @@ CREATE TABLE `Tbl_OtpLog` (
 - [Login](#login)
 - [GetOtp](#get-otp)
 - [ValidateOtp](#validate-otp)
+- [ForgetPassword](#forget-password)
 
 
  ### Health Check
@@ -208,6 +209,29 @@ CREATE TABLE `Tbl_OtpLog` (
  }
  ```
  #### Response
+ ```json
+ {
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "S0000",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Forget Password
+ ```js
+ POST http://localhost:8081/authapi/users/forget-password
+ ```
+ ### Request
+ ```json
+ {
+  "email": "sithuramyo@gmail.com",
+  "password": "string"
+ }
+ ```
+ ### Response
  ```json
  {
     "response": {

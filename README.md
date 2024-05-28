@@ -76,7 +76,7 @@ CREATE TABLE `Tbl_OtpLog` (
  ### Health Check
  #### Health means database connection can connect with server
  ```js
- GET http://localhost:8081/health
+ GET http://localhost:8080/authapi/health
  ```
  #### Request
  ##### No need
@@ -117,7 +117,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Users Register
  ```js
- POST http://localhost:8081/authapi/users/users-register
+ POST http://localhost:8080/authapi/users/users-register
  ```
  #### Request
  ```json
@@ -139,7 +139,7 @@ CREATE TABLE `Tbl_OtpLog` (
     "refreshTokenExpires": 240,
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }
@@ -148,7 +148,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Login
  ```js
- POST http://localhost:8081/authapi/login/users-login
+ POST http://localhost:8080/authapi/login/users-login
  ```
  #### Request
  ```json
@@ -167,7 +167,7 @@ CREATE TABLE `Tbl_OtpLog` (
     "refreshTokenExpires": 240,
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }
@@ -176,7 +176,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Get Otp
  ```js
- POST http://localhost:8081/authapi/otp/get-otp
+ POST http://localhost:8080/authapi/otp/get-otp
  ```
  #### Request
  ```json
@@ -191,7 +191,7 @@ CREATE TABLE `Tbl_OtpLog` (
     "expireType": "Minute",
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }
@@ -200,7 +200,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Validate Otp
  ```js
- POST http://localhost:8081/authapi/otp/validate-otp
+ POST http://localhost:8080/authapi/otp/validate-otp
  ```
  #### Request
  ```json
@@ -213,7 +213,7 @@ CREATE TABLE `Tbl_OtpLog` (
  {
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }
@@ -222,7 +222,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Forget Password
  ```js
- POST http://localhost:8081/authapi/users/forget-password
+ POST http://localhost:8080/authapi/users/forget-password
  ```
  ### Request
  ```json
@@ -236,7 +236,7 @@ CREATE TABLE `Tbl_OtpLog` (
  {
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }

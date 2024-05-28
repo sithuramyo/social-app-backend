@@ -70,7 +70,7 @@ CREATE TABLE `Tbl_OtpLog` (
 - [Login](#login)
 - [GetOtp](#get-otp)
 - [ValidateOtp](#validate-otp)
-- [ForgetPassword](#forget-password)
+- [ChangeForgetPassword](#forget-password)
 
 
  ### Health Check
@@ -220,7 +220,7 @@ CREATE TABLE `Tbl_OtpLog` (
  }
  ```
 
- ### Forget Password
+ ### Change Forget Password
  ```js
  POST http://localhost:8080/authapi/users/forget-password
  ```

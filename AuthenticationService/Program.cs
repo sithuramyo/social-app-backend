@@ -184,7 +184,7 @@ if (app.Environment.IsDevelopment())
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 ResourcesExtension.Configure(app.Services.GetRequiredService<IStringLocalizer<ResponseDescription>>());
 
-app.MapHealthChecks("health", new HealthCheckOptions
+app.MapHealthChecks("/authapi/health", new HealthCheckOptions
 {
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });

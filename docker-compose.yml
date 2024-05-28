@@ -24,6 +24,7 @@ services:
       - "8080:8080"
     depends_on:
       - socialbackenddb
+      - authenticationservice
     environment:
       DB_HOST: socialbackenddb
       DB_PORT: 3307

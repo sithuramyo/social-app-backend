@@ -14,11 +14,11 @@
   ```
   
   ```yaml
-  version: '3.8'
+   version: '3.8'
 
 services:
   socialbackenddb:
-    image: sithuramyo/social-app-db:<use tagname from dockerhub>
+    image: sithuramyo/social-app-db:1.1
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: socialdb
@@ -31,7 +31,7 @@ services:
       - db_data:/var/lib/mysql
 
   apigatewayservice:
-    image:  sithuramyo/social-app-apigateway:<use tagname from dockerhub>
+    image:  sithuramyo/social-app-apigateway:1.3
     ports:
       - "8080:8080"
     depends_on:
@@ -46,7 +46,7 @@ services:
       DB_PASSWORD: socialpassword
 
   authenticationservice:
-    image:  sithuramyo/social-app-authenticationapi:<use tagname from dockerhub>
+    image:  sithuramyo/social-app-authenticationapi:1.8
     ports:
       - "8081:8081"
     depends_on:
@@ -59,7 +59,7 @@ services:
       DB_PASSWORD: socialpassword
 
   socialmediaservice:
-    image:  sithuramyo/social-app-socialmediaapi:<use tagname from dockerhub>
+    image:  sithuramyo/social-app-socialmediaapi:1.0
     ports:
       - "8082:8082"
     depends_on:

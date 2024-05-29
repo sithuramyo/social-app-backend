@@ -13,7 +13,7 @@
   https://hub.docker.com/repositories/sithuramyo
   ```
   
-  ```json
+  ```yml
   version: '3.8'
 
 services:

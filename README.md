@@ -417,7 +417,7 @@ CREATE TABLE `Tbl_FriendShips` (
  }
  ```
 
- ### Unfriend
+ ### Un Friend
  ```js
  POST http://localhost:8080/socialmediaapi/friendships/un-friend
  ```

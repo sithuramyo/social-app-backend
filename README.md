@@ -101,6 +101,8 @@ CREATE TABLE `Tbl_FriendShips` (
 - [ApproveFriendSentRequest](#approve-friend-sent-request)
 - [UnFriend](#un-friend)
 
+ ## Authentication
+ ### Add bearer token in header
 
  ### Health Check
  #### Health means database connection can connect with server

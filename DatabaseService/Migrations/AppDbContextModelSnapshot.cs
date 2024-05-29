@@ -45,7 +45,82 @@ namespace DatabaseService.Migrations
                     b.ToTable("Tbl_Login");
                 });
 
-            modelBuilder.Entity("DatabaseService.DataModels.Authentication.Users", b =>
+            modelBuilder.Entity("DatabaseService.DataModels.Friends.Friends", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsUnfriend")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("UserIdOne")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserIdTwo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tbl_Friends");
+                });
+
+            modelBuilder.Entity("DatabaseService.DataModels.Friends.Friendships", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("ApprovedDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("FriendShipStatus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReceiverUserId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("SendDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("SenderUserId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tbl_FriendShips");
+                });
+
+            modelBuilder.Entity("DatabaseService.DataModels.OtpLogs.OtpLog", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Otp")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("OtpExpires")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tbl_OtpLog");
+                });
+
+            modelBuilder.Entity("Users", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -91,28 +166,6 @@ namespace DatabaseService.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tbl_Users");
-                });
-
-            modelBuilder.Entity("DatabaseService.DataModels.OtpLogs.OtpLog", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("Otp")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime>("OtpExpires")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tbl_OtpLog");
                 });
 #pragma warning restore 612, 618
         }

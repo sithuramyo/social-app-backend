@@ -1,6 +1,5 @@
-﻿namespace AuthenticationService
+﻿namespace AuthenticationService;
+
+public class ResponseDescription
 {
-    public class ResponseDescription
-    {
-    }
 }

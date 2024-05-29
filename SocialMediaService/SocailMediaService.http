@@ -1,0 +1,6 @@
+@SocailMediaService_HostAddress = http://localhost:5282
+
+GET {{SocailMediaService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

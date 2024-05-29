@@ -7,6 +7,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["ApiGatewayService/ApiGatewayService.csproj", "ApiGatewayService/"]
+COPY ["Shared/Shared.csproj", "Shared/"]
 RUN dotnet restore "ApiGatewayService/ApiGatewayService.csproj"
 COPY . .
 WORKDIR "/src/ApiGatewayService"

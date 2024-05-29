@@ -16,9 +16,9 @@
   ```yaml
    version: '3.8'
 
-services:
-  socialbackenddb:
-    image: sithuramyo/social-app-db:1.1
+   services:
+     socialbackenddb:
+       image: sithuramyo/social-app-db:1.1
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: socialdb
@@ -71,8 +71,8 @@ services:
       DB_USER: socialuser
       DB_PASSWORD: socialpassword
 
-volumes:
-  db_data:
+  volumes:
+    db_data:
 
   ```
 # Step Two

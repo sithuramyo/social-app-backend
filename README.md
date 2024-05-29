@@ -9,6 +9,72 @@
 # Step One
 - run docker-compose.yml file using cmd 'docker-compose up -d'
   
+  ```js
+  https://hub.docker.com/repositories/sithuramyo
+  ```
+  
+  ```json
+  version: '3.8'
+
+services:
+  socialbackenddb:
+    image: sithuramyo/social-app-db:<use tagname from dockerhub>
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: socialdb
+      MYSQL_USER: socialuser
+      MYSQL_PASSWORD: socialpassword
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./sql-scripts:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+
+  apigatewayservice:
+    image:  sithuramyo/social-app-apigateway:<use tagname from dockerhub>
+    ports:
+      - "8080:8080"
+    depends_on:
+      - socialbackenddb
+      - authenticationservice
+      - socialmediaservice
+    environment:
+      DB_HOST: socialbackenddb
+      DB_PORT: 3307
+      DB_NAME: socialdb
+      DB_USER: socialuser
+      DB_PASSWORD: socialpassword
+
+  authenticationservice:
+    image:  sithuramyo/social-app-authenticationapi:<use tagname from dockerhub>
+    ports:
+      - "8081:8081"
+    depends_on:
+      - socialbackenddb
+    environment:
+      DB_HOST: socialbackenddb
+      DB_PORT: 3307
+      DB_NAME: socialdb
+      DB_USER: socialuser
+      DB_PASSWORD: socialpassword
+
+  socialmediaservice:
+    image:  sithuramyo/social-app-socialmediaapi:<use tagname from dockerhub>
+    ports:
+      - "8082:8082"
+    depends_on:
+      - socialbackenddb
+    environment:
+      DB_HOST: socialbackenddb
+      DB_PORT: 3307
+      DB_NAME: socialdb
+      DB_USER: socialuser
+      DB_PASSWORD: socialpassword
+
+volumes:
+  db_data:
+
+  ```
 # Step Two
 - Change Stage value as 1 in appsetting.json(1 defined as default,2 defined as local)
   

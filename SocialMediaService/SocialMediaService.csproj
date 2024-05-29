@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>SocialMediaService</RootNamespace>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCore.HealthChecks.MySql" Version="8.0.1"/>
+        <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="8.0.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5"/>
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.5"/>
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <PackageReference Include="Serilog" Version="3.1.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\DatabaseService\DatabaseService.csproj"/>
+        <ProjectReference Include="..\GoogleDriveService\GoogleDriveService.csproj"/>
+        <ProjectReference Include="..\MailService\MailService.csproj"/>
+        <ProjectReference Include="..\Shared\Shared.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Resources\ResponseDescription.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>ResponseDescription.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\ResponseDescription.en-US.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>ResponseDescription.en-US.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\ResponseDescription.my-MM.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>ResponseDescription.my-MM.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Resources\ResponseDescription.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>ResponseDescription.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Resources\ResponseDescription.en-US.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>ResponseDescription.en-US.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Resources\ResponseDescription.my-MM.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>ResponseDescription.my-MM.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+</Project>

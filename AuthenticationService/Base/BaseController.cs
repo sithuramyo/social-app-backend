@@ -27,10 +27,8 @@ public class BaseController : ControllerBase
     protected IActionResult SystemError<T>(T obj, Exception ex) where T : BaseSubResponseModel
     {
         LogException(ex);
-        obj.Response.Set(ResponseConstants.E0000);
         var jobject = JObject.Parse(obj.ToJson());
-        var respDesp = jobject["Response"]["ResponseDescription"]
-            .ToString().GetResource();
+        var respDesp = ResponseConstants.E0000.GetResource();
         jobject["Response"]["ResponseDescription"] = respDesp;
         var model = jobject.ToString().ToObject<T>();
         return Ok(model);

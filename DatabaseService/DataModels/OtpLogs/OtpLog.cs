@@ -1,6 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace DatabaseService.DataModels.OtpLogs;
 
 [Table("Tbl_OtpLog")]

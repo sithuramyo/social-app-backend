@@ -1,5 +1,7 @@
 using DatabaseService.DataModels.Authentication;
+using DatabaseService.DataModels.Friends;
 using DatabaseService.DataModels.OtpLogs;
+using DatabaseService.DataModels.Posts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -25,6 +27,13 @@ public class AppDbContext : DbContext
     public DbSet<Users> Users { get; set; }
     public DbSet<Login> Login { get; set; }
     public DbSet<OtpLog> OtpLogs { get; set; }
+    public DbSet<Friendships> FriendShips { get; set; }
+    public DbSet<Friend> Friends { get; set; }
+    // public DbSet<Posts> Posts { get; set; }
+    // public DbSet<PostsLiked> PostsLiked { get; set; }
+    // public DbSet<PostsComments> PostsComments { get; set; }
+    // public DbSet<PostsShared> PostsShared { get; set; }
+    // public DbSet<PostsCommentsLiked> PostsCommentsLikeds { get; set; }
 }
 
 public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>

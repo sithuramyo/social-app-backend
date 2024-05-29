@@ -62,6 +62,29 @@ CREATE TABLE `Tbl_OtpLog` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 ```
+ For Tbl_Friends
+```sql
+CREATE TABLE `Tbl_Friends` (
+  `Id` bigint NOT NULL AUTO_INCREMENT,
+  `UserIdOne` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `UserIdTwo` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CreatedDate` datetime(6) NOT NULL,
+  `IsUnfriend` tinyint(1) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
+For Tbl_FriendShips
+```sql
+CREATE TABLE `Tbl_FriendShips` (
+  `Id` bigint NOT NULL AUTO_INCREMENT,
+  `SenderUserId` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ReceiverUserId` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `FriendShipStatus` int NOT NULL,
+  `SendDate` datetime(6) NOT NULL,
+  `ApprovedDate` datetime(6) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
 
 # Step Five
 ## API Documentation
@@ -71,13 +94,27 @@ CREATE TABLE `Tbl_OtpLog` (
 - [GetOtp](#get-otp)
 - [ValidateOtp](#validate-otp)
 - [ChangeForgetPassword](#forget-password)
+- [SearchFriendList](#search-friend-list)
+- [GetFriendList](#get-friend-list)
+- [GetFriendSentRequestList](#get-friend-sent-request-list)
+- [AddFriendSentRequest](#add-friend-sent-request)
+- [ApproveFriendSentRequest](#approve-friend-sent-request)
+- [UnFriend](#un-friend)
 
 
  ### Health Check
  #### Health means database connection can connect with server
+
+ ##### For authentication database health check
  ```js
  GET http://localhost:8080/authapi/health
  ```
+
+ ##### For social media database health check
+ ```js
+ GET http://localhost:8080/socialmediaapi/health
+ ```
+
  #### Request
  ##### No need
 
@@ -229,6 +266,165 @@ CREATE TABLE `Tbl_OtpLog` (
  {
   "email": "sithuramyo@gmail.com",
   "password": "string"
+ }
+ ```
+ ### Response
+ ```json
+ {
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Search Friend List
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/search-friend-list
+ ```
+ ### Request
+ ```json
+ {
+    "name" : "kya"
+ }
+ ```
+ ### Response
+ ```json
+ {
+    "friendShipsList": [
+        {
+            "friendId": "35a114c1-cd01-45b6-ae7d-67559fdf4a4c",
+            "name": "kyawkyaw",
+            "friendPhotoPath": ""
+        },
+        {
+            "friendId": "1dd57e00-e3b6-467f-abf4-33efb0c5d911",
+            "name": "kyawlay",
+            "friendPhotoPath": "https://drive.google.com/file/d/1J-VxICZVZZVJ89ZjHTG7XviDgyG7kPym"
+        },
+        {
+            "friendId": "67db8896-d093-4668-81db-064172fcf4e0",
+            "name": "kyawkyawlay",
+            "friendPhotoPath": "https://drive.google.com/file/d/1fXck6whns1MwEiNexYrmnErdJnvn7OrP"
+        },
+        {
+            "friendId": "77e0ae3b-b111-4aab-be31-d090e87c5c8a",
+            "name": "kyawlay",
+            "friendPhotoPath": ""
+        }
+    ],
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Get Friend List
+ ```js
+ GET http://localhost:8080/socialmediaapi/friendships/get-friend-list
+ ```
+ ### Request 
+ #### No request
+
+ ### Response
+ ```json
+ {
+    "friendShipsList": [],
+    "friendCount": 0,
+    "response": {
+        "responseCode": "W0002",
+        "responseDescription": "Data not found",
+        "responseType": 3,
+        "isError": true
+    }
+ }
+ ```
+ ### Get Friend Sent Request List
+ ```js
+ GET http://localhost:8080/socialmediaapi/friendships/get-friend-sent-request-list
+ ```
+ ### Request
+ #### No request
+
+ ### Response
+ ```json
+ {
+    "addFriendRequestList": [
+        {
+            "friendId": "1dd57e00-e3b6-467f-abf4-33efb0c5d911",
+            "name": "kyawlay",
+            "friendPhotoPath": "https://drive.google.com/file/d/1J-VxICZVZZVJ89ZjHTG7XviDgyG7kPym"
+        }
+    ],
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Add Friend Sent Request
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/add-friend-request-sent
+ ```
+ ### Request
+ ```json
+ {
+    "friendId": "1dd57e00-e3b6-467f-abf4-33efb0c5d911"
+ }
+ ```
+
+ ### Response 
+ ```json
+ {
+    "addFriendSentRequestStatus": "Pending",
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Approve Friend Sent Request
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/approve-friend-sent-request
+ ```
+ ### Request
+ ```json
+ {
+  "friendId": "991d0f9b-114e-40a5-8524-17e1188f639d",
+  "isAccept": true
+ }
+ ```
+ ### Response
+ ```json
+ {
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Unfriend
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/un-friend
+ ```
+ ### Request
+ ```json
+ {
+  "friendId": "b15f953b-b711-4f87-bad7-561c4ed8b82f"
  }
  ```
  ### Response

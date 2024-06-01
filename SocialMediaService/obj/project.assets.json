@@ -56,6 +56,19 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "BouncyCastle.Cryptography/2.3.1": {
         "type": "package",
         "compile": {
@@ -1036,6 +1049,38 @@
           }
         }
       },
+      "AuthenticationService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AspNetCore.HealthChecks.MySql": "8.0.1",
+          "AspNetCore.HealthChecks.UI.Client": "8.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DatabaseService": "1.0.0",
+          "GoogleDriveService": "1.0.0",
+          "MailService": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
+          "Microsoft.AspNetCore.OpenApi": "8.0.5",
+          "Microsoft.EntityFrameworkCore": "8.0.5",
+          "Microsoft.Extensions.Localization": "8.0.5",
+          "Newtonsoft.Json": "13.0.3",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.0",
+          "Serilog": "3.1.0",
+          "Serilog.Sinks.File": "5.0.0",
+          "Shared": "1.0.0",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "Swashbuckle.AspNetCore.Filters": "8.0.1"
+        },
+        "compile": {
+          "bin/placeholder/AuthenticationService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AuthenticationService.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "DatabaseService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1145,6 +1190,37 @@
         "icon.png",
         "lib/net6.0/HealthChecks.UI.Core.dll",
         "lib/net6.0/HealthChecks.UI.Core.xml"
+      ]
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
       ]
     },
     "BouncyCastle.Cryptography/2.3.1": {
@@ -2867,6 +2943,11 @@
         "timezoneconverter.nuspec"
       ]
     },
+    "AuthenticationService/1.0.0": {
+      "type": "project",
+      "path": "../AuthenticationService/AuthenticationService.csproj",
+      "msbuildProject": "../AuthenticationService/AuthenticationService.csproj"
+    },
     "DatabaseService/1.0.0": {
       "type": "project",
       "path": "../DatabaseService/DatabaseService.csproj",
@@ -2892,6 +2973,7 @@
     "net8.0": [
       "AspNetCore.HealthChecks.MySql >= 8.0.1",
       "AspNetCore.HealthChecks.UI.Client >= 8.0.1",
+      "AuthenticationService >= 1.0.0",
       "DatabaseService >= 1.0.0",
       "GoogleDriveService >= 1.0.0",
       "MailService >= 1.0.0",
@@ -2933,6 +3015,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/AuthenticationService.csproj": {
+              "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/AuthenticationService.csproj"
+            },
             "/Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/DatabaseService.csproj": {
               "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/DatabaseService.csproj"
             },

@@ -10,4 +10,7 @@ public interface IFriendShipsService
     Task<AddFriendSentResponseModel> AddFriendSentRequest(string userId,AddFriendSentRequestModel request,CancellationToken ct);
     Task<ApproveFriendSentResponseModel> ApproveFriendSentRequest(string userId,ApproveFriendSentRequestModel request,CancellationToken ct);
     Task<UnFriendResponseModel> UnFriend(string userId,UnFriendRequestModel request,CancellationToken ct);
+    Task<BlockedFriendResponseModel> BlockedFriend(string userId,BlockedFriendRequestModel request,CancellationToken ct);
+    Task<UnBlockedFriendResponseModel> UnBlockedFriend(string userId,UnBlockedFriendRequestModel request,CancellationToken ct);
+    Task<BlockedFriendListResponseModel> GetBlockedFriendList(string userId,CancellationToken ct);
 }

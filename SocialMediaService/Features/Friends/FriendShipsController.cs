@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
 using Shared.Models.FriendShips;
-using SocialMediaService.Base;
 
 namespace SocialMediaService.Features.Friends;
 
@@ -107,6 +105,56 @@ public class FriendShipsController : BaseController
         try
         {
             model = await _service.UnFriend(GetUserId(), request, ct);
+        }
+        catch (Exception ex)
+        {
+            return SystemError(model, ex);
+        }
+
+        return OkWithLocalize(model);
+    }
+
+    [HttpPost("blocked-friend")]
+    public async Task<IActionResult> BlockedFriend(BlockedFriendRequestModel request,
+        CancellationToken ct)
+    {
+        BlockedFriendResponseModel model = new();
+        try
+        {
+            model = await _service.BlockedFriend(GetUserId(), request, ct);
+        }
+        catch (Exception ex)
+        {
+            return SystemError(model, ex);
+        }
+
+        return OkWithLocalize(model);
+    }
+
+    [HttpPost("unblocked-friend")]
+    public async Task<IActionResult> UnBlockedFriend(UnBlockedFriendRequestModel request,
+        CancellationToken ct)
+    {
+        UnBlockedFriendResponseModel model = new();
+        try
+        {
+            model = await _service.UnBlockedFriend(GetUserId(), request, ct);
+        }
+        catch (Exception ex)
+        {
+            return SystemError(model, ex);
+        }
+
+        return OkWithLocalize(model);
+    }
+
+    [HttpGet("get-blocked-friend-list")]
+    public async Task<IActionResult> GetBlockedFriendList(CancellationToken ct)
+    {
+        BlockedFriendListResponseModel model = new();
+        try
+        {
+            model = await _service.GetBlockedFriendList(GetUserId(), ct);
         }
         catch (Exception ex)
         {

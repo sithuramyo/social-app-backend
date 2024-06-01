@@ -26,7 +26,21 @@ public class UploadService
         var createFolderService = new Create(driveService);
         var fileByte = Convert.FromBase64String(image);
         var fileName = StringsExtension.GetImageName();
-        var folderId = await createFolderService.CreateFolder(userName,GoogleDriveConstants.ParentFolderId);
+        var folderId = await createFolderService.CreateFolder(userName,GoogleDriveConstants.UsersImagesFolderId);
+        var uploadFileService = new Upload(driveService);
+        var fileId = await uploadFileService.UploadFile(folderId,fileByte,fileName);
+        await MakeFileToPublic(fileId);
+        var imageFilePath = fileId.GetGoogleDriveFileUrl();
+        return imageFilePath;
+    }
+
+    public async Task<string> SavePostsMedia(string fileValue, string folderName)
+    {
+        var driveService = _driveHelper.GetDriveService(GoogleDriveConstants.GoogleDriveCredential);
+        var createFolderService = new Create(driveService);
+        var fileByte = Convert.FromBase64String(fileValue);
+        var fileName = StringsExtension.GetImageName();
+        var folderId = await createFolderService.CreateFolder(folderName,GoogleDriveConstants.PostsMediaFolderId);
         var uploadFileService = new Upload(driveService);
         var fileId = await uploadFileService.UploadFile(folderId,fileByte,fileName);
         await MakeFileToPublic(fileId);

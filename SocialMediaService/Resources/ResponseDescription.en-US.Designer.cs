@@ -116,5 +116,23 @@ namespace SocialMediaService.Resources {
                 return ResourceManager.GetString("W0008", resourceCulture);
             }
         }
+        
+        internal static string W0009 {
+            get {
+                return ResourceManager.GetString("W0009", resourceCulture);
+            }
+        }
+        
+        internal static string W0010 {
+            get {
+                return ResourceManager.GetString("W0010", resourceCulture);
+            }
+        }
+        
+        internal static string W0011 {
+            get {
+                return ResourceManager.GetString("W0011", resourceCulture);
+            }
+        }
     }
 }

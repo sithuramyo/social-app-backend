@@ -7,7 +7,10 @@
 
 
 # Step One
-- run docker-compose.yml file using cmd ```sh docker-compose up -d ```
+- run docker-compose.yml file using cmd
+  ```sh
+  docker-compose up -d
+  ```
   
   ```js
   https://hub.docker.com/repositories/sithuramyo

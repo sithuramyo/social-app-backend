@@ -191,7 +191,7 @@ CREATE TABLE `Tbl_FriendShips` (
 
  #### Response
  ##### If database is healthy
- ```js
+ ```json
  {
   "status": "Healthy",
   "totalDuration": "00:00:00.6618975",
@@ -206,7 +206,7 @@ CREATE TABLE `Tbl_FriendShips` (
  }
  ```
  ##### If database is unhealthy
- ```js
+ ```json
  {
   "status": "Unhealthy",
   "totalDuration": "00:00:00.1178625",

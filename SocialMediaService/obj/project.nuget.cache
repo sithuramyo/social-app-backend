@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "WnHva/kSdYf0ZUi4Shc92ADzp2AWx+M+CKAHmx6+Rin1a5WyF98btspKcuAlaYTr+wwEQ12Jhlr0yAs8m/dWEQ==",
+  "dgSpecHash": "f86nO/LYgwoE02K7gdJFFe7P22qyixuHZe8rYshrKFG68SpvwDNu1PBD1Z4wXGY6hC0qJd9jcQSEIoGIm52R8Q==",
   "success": true,
   "projectFilePath": "/Users/sithuramyo/Documents/Project/social-app-backend/SocialMediaService/SocialMediaService.csproj",
   "expectedPackageFiles": [
     "/Users/sithuramyo/.nuget/packages/aspnetcore.healthchecks.mysql/8.0.1/aspnetcore.healthchecks.mysql.8.0.1.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/aspnetcore.healthchecks.ui.client/8.0.1/aspnetcore.healthchecks.ui.client.8.0.1.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/aspnetcore.healthchecks.ui.core/8.0.1/aspnetcore.healthchecks.ui.core.8.0.1.nupkg.sha512",
+    "/Users/sithuramyo/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/bouncycastle.cryptography/2.3.1/bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/google.apis/1.68.0/google.apis.1.68.0.nupkg.sha512",
     "/Users/sithuramyo/.nuget/packages/google.apis.auth/1.68.0/google.apis.auth.1.68.0.nupkg.sha512",

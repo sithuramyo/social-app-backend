@@ -29,11 +29,14 @@ public class AppDbContext : DbContext
     public DbSet<OtpLog> OtpLogs { get; set; }
     public DbSet<Friendships> FriendShips { get; set; }
     public DbSet<Friend> Friends { get; set; }
-    // public DbSet<Posts> Posts { get; set; }
-    // public DbSet<PostsLiked> PostsLiked { get; set; }
-    // public DbSet<PostsComments> PostsComments { get; set; }
-    // public DbSet<PostsShared> PostsShared { get; set; }
-    // public DbSet<PostsCommentsLiked> PostsCommentsLikeds { get; set; }
+    public DbSet<FriendBlocked> FriendsBlocked{ get; set; }
+    public DbSet<Post> Posts { get; set; }
+    public DbSet<PostsLiked> PostsLiked { get; set; }
+    public DbSet<PostsComments> PostsComments { get; set; }
+    public DbSet<PostsShared> PostsShared { get; set; }
+    public DbSet<PostsCommentsLiked> PostsCommentsLikeds { get; set; }
+    public DbSet<PostsMedia> PostsMedia { get; set; }
+    public DbSet<PostsRestricted> PostsRestricted { get; set; }
 }
 
 public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>

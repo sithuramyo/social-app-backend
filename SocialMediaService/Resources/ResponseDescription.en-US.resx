@@ -54,4 +54,13 @@
     <data name="W0008" xml:space="preserve">
         <value>You can't sent request yourself</value>
     </data>
+    <data name="W0009" xml:space="preserve">
+        <value>You can't sent request blocked user</value>
+    </data>
+    <data name="W0010" xml:space="preserve">
+        <value>You can't unfriend blocked user</value>
+    </data>
+    <data name="W0011" xml:space="preserve">
+        <value>You can't block blocked user</value>
+    </data>
 </root>

@@ -9,5 +9,5 @@ public class PostsComments : BaseDataModel
     public string PostId { get; set; }
     public string UserId { get; set; }
     public string CommentText { get; set; }
-    public string CommentImagePath { get; set; }
+    public string? CommentImagePath { get; set; }
 }

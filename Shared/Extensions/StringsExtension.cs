@@ -64,4 +64,9 @@ public static class StringsExtension
         var imageName = $"{Guid.NewGuid()}.jpg";
         return imageName;
     }
+
+    public static string GetGoogleDriveFileUrl(this string fileId)
+    {
+        return $"https://drive.google.com/file/d/{fileId}";
+    }
 }

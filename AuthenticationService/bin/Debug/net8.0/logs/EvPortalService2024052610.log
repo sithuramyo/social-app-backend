@@ -1,4 +1,0 @@
-2024-05-26 10:49:52.946 +06:30 [ERR] Error : Object reference not set to an instance of an object., 
-    at AuthenticationService.Features.Otps.OtpController.GetOtp(OtpRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Otps/OtpController.cs:line 18
-2024-05-26 10:50:35.980 +06:30 [ERR] Error : Object reference not set to an instance of an object., 
-    at AuthenticationService.Features.Otps.OtpController.GetOtp(OtpRequestModel request, CancellationToken ct) in /Users/sithuramyo/Documents/Project/social-app-backend/AuthenticationService/Features/Otps/OtpController.cs:line 18

@@ -2468,39 +2468,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/sithuramyo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Social App\\social-app-backend\\DatabaseService\\DatabaseService.csproj",
+      "projectUniqueName": "/Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/DatabaseService.csproj",
       "projectName": "DatabaseService",
-      "projectPath": "D:\\Projects\\Social App\\social-app-backend\\DatabaseService\\DatabaseService.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Social App\\social-app-backend\\DatabaseService\\obj\\",
+      "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/DatabaseService.csproj",
+      "packagesPath": "/Users/sithuramyo/.nuget/packages/",
+      "outputPath": "/Users/sithuramyo/Documents/Project/social-app-backend/DatabaseService/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/sithuramyo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projects\\Social App\\social-app-backend\\Shared\\Shared.csproj": {
-              "projectPath": "D:\\Projects\\Social App\\social-app-backend\\Shared\\Shared.csproj"
+            "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/Shared.csproj": {
+              "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/Shared.csproj"
             }
           }
         }
@@ -2509,11 +2502,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2555,7 +2543,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/sithuramyo/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -17,4 +17,41 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Shared\Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\ResponseDescription.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResponseDescription.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\ResponseDescription.en-US.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResponseDescription.en-US.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\ResponseDescription.my-MM.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResponseDescription.my-MM.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\ResponseDescription.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResponseDescription.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\ResponseDescription.en-US.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResponseDescription.en-US.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\ResponseDescription.my-MM.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResponseDescription.my-MM.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

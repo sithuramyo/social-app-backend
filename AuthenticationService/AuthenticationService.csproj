@@ -25,6 +25,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DatabaseService\DatabaseService.csproj" />
+      <ProjectReference Include="..\GoogleDriveService\GoogleDriveService.csproj" />
       <ProjectReference Include="..\MailService\MailService.csproj" />
       <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>

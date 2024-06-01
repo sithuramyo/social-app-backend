@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Shared.Extensions;
 
-public static class BoolsExtension
+public static partial class BoolsExtension
 {
     public static bool IsValidEmail(this string email)
     {
@@ -48,4 +48,33 @@ public static class BoolsExtension
             return false;
         }
     }
+
+    public static bool IsValidBase64(this string str)
+    {
+        // Check if the string length is a multiple of 4
+        if (str.Length % 4 != 0)
+        {
+            return false;
+        }
+
+        // Check if the string matches the Base64 format using a regular expression
+        if (!MyRegex().IsMatch(str))
+        {
+            return false;
+        }
+
+        // Try to decode the string to see if it is valid Base64
+        try
+        {
+            Convert.FromBase64String(str);
+            return true;
+        }
+        catch (FormatException)
+        {
+            return false;
+        }
+    }
+
+    [GeneratedRegex(@"^[a-zA-Z0-9\+/]*={0,2}$")]
+    private static partial Regex MyRegex();
 }

@@ -72,7 +72,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 #endregion
-
+builder.Services.AddAuthorization();
 #region Localization
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -140,7 +140,7 @@ builder.Services.AddHealthChecks()
 
 #region Serilog
 
-string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs/EvPortalService.log");
+string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs/SocialAppAuthenticationService.log");
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
@@ -157,20 +157,20 @@ Log.Logger = new LoggerConfiguration()
 
 #endregion
 
-#region Cors
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll",
-        b =>
-        {
-            b.AllowAnyOrigin()
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        });
-});
-
-#endregion
+// #region Cors
+//
+// builder.Services.AddCors(options =>
+// {
+//     options.AddPolicy("AllowAll",
+//         b =>
+//         {
+//             b.AllowAnyOrigin()
+//                 .AllowAnyHeader()
+//                 .AllowAnyMethod();
+//         });
+// });
+//
+// #endregion
 
 var app = builder.Build();
 
@@ -184,14 +184,14 @@ if (app.Environment.IsDevelopment())
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 ResourcesExtension.Configure(app.Services.GetRequiredService<IStringLocalizer<ResponseDescription>>());
 
-app.MapHealthChecks("health", new HealthCheckOptions
+app.MapHealthChecks("/authapi/health", new HealthCheckOptions
 {
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseCors("AllowAll");
+//app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapGet("/", () => "Social App Backend AuthenticationApi");

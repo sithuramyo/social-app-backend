@@ -1,6 +1,83 @@
+# Using tech stack
+- dotnet 8
+- EF core 8
+- mysql
+- smtp
+- google drive api
+
+
 # Step One
-- run docker-compose.yml file using cmd 'docker-compose up -d'
+- run docker-compose.yml file using cmd
+  ```sh
+  docker-compose up -d
+  ```
+ ## To check docker images update
+  ```js
+  https://hub.docker.com/repositories/sithuramyo
+  ```
   
+  ```yaml
+   version: '3.8'
+
+   services:
+     socialbackenddb:
+       image: sithuramyo/social-app-db:1.1
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: socialdb
+      MYSQL_USER: socialuser
+      MYSQL_PASSWORD: socialpassword
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./sql-scripts:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+
+  apigatewayservice:
+    image:  sithuramyo/social-app-apigateway:1.3
+    ports:
+      - "8080:8080"
+    depends_on:
+      - socialbackenddb
+      - authenticationservice
+      - socialmediaservice
+    environment:
+      DB_HOST: socialbackenddb
+      DB_PORT: 3307
+      DB_NAME: socialdb
+      DB_USER: socialuser
+      DB_PASSWORD: socialpassword
+
+  authenticationservice:
+    image:  sithuramyo/social-app-authenticationapi:1.8
+    ports:
+      - "8081:8081"
+    depends_on:
+      - socialbackenddb
+    environment:
+      DB_HOST: socialbackenddb
+      DB_PORT: 3307
+      DB_NAME: socialdb
+      DB_USER: socialuser
+      DB_PASSWORD: socialpassword
+
+  socialmediaservice:
+    image:  sithuramyo/social-app-socialmediaapi:1.0
+    ports:
+      - "8082:8082"
+    depends_on:
+      - socialbackenddb
+    environment:
+      DB_HOST: socialbackenddb
+      DB_PORT: 3307
+      DB_NAME: socialdb
+      DB_USER: socialuser
+      DB_PASSWORD: socialpassword
+
+  volumes:
+    db_data:
+
+  ```
 # Step Two
 - Change Stage value as 1 in appsetting.json(1 defined as default,2 defined as local)
   
@@ -54,6 +131,29 @@ CREATE TABLE `Tbl_OtpLog` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 ```
+ For Tbl_Friends
+```sql
+CREATE TABLE `Tbl_Friends` (
+  `Id` bigint NOT NULL AUTO_INCREMENT,
+  `UserIdOne` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `UserIdTwo` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CreatedDate` datetime(6) NOT NULL,
+  `IsUnfriend` tinyint(1) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
+For Tbl_FriendShips
+```sql
+CREATE TABLE `Tbl_FriendShips` (
+  `Id` bigint NOT NULL AUTO_INCREMENT,
+  `SenderUserId` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ReceiverUserId` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `FriendShipStatus` int NOT NULL,
+  `SendDate` datetime(6) NOT NULL,
+  `ApprovedDate` datetime(6) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
 
 # Step Five
 ## API Documentation
@@ -62,13 +162,30 @@ CREATE TABLE `Tbl_OtpLog` (
 - [Login](#login)
 - [GetOtp](#get-otp)
 - [ValidateOtp](#validate-otp)
+- [ChangeForgetPassword](#forget-password)
+- [SearchFriendList](#search-friend-list)
+- [GetFriendList](#get-friend-list)
+- [GetFriendSentRequestList](#get-friend-sent-request-list)
+- [AddFriendSentRequest](#add-friend-sent-request)
+- [ApproveFriendSentRequest](#approve-friend-sent-request)
+- [UnFriend](#un-friend)
 
+ ## Authentication
+ ### Add bearer token in header
 
  ### Health Check
  #### Health means database connection can connect with server
+
+ ##### For authentication database health check
  ```js
- GET http://localhost:8081/health
+ GET http://localhost:8080/authapi/health
  ```
+
+ ##### For social media database health check
+ ```js
+ GET http://localhost:8080/socialmediaapi/health
+ ```
+
  #### Request
  ##### No need
 
@@ -108,7 +225,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Users Register
  ```js
- POST http://localhost:8081/authapi/users/users-register
+ POST http://localhost:8080/authapi/users/users-register
  ```
  #### Request
  ```json
@@ -130,7 +247,7 @@ CREATE TABLE `Tbl_OtpLog` (
     "refreshTokenExpires": 240,
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }
@@ -139,7 +256,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Login
  ```js
- POST http://localhost:8081/authapi/login/users-login
+ POST http://localhost:8080/authapi/login/users-login
  ```
  #### Request
  ```json
@@ -158,7 +275,7 @@ CREATE TABLE `Tbl_OtpLog` (
     "refreshTokenExpires": 240,
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }
@@ -167,7 +284,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Get Otp
  ```js
- POST http://localhost:8081/authapi/otp/get-otp
+ POST http://localhost:8080/authapi/otp/get-otp
  ```
  #### Request
  ```json
@@ -182,7 +299,7 @@ CREATE TABLE `Tbl_OtpLog` (
     "expireType": "Minute",
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }
@@ -191,7 +308,7 @@ CREATE TABLE `Tbl_OtpLog` (
 
  ### Validate Otp
  ```js
- POST http://localhost:8081/authapi/otp/validate-otp
+ POST http://localhost:8080/authapi/otp/validate-otp
  ```
  #### Request
  ```json
@@ -204,7 +321,189 @@ CREATE TABLE `Tbl_OtpLog` (
  {
     "response": {
         "responseCode": "S0000",
-        "responseDescription": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Change Forget Password
+ ```js
+ POST http://localhost:8080/authapi/users/forget-password
+ ```
+ ### Request
+ ```json
+ {
+  "email": "sithuramyo@gmail.com",
+  "password": "string"
+ }
+ ```
+ ### Response
+ ```json
+ {
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Search Friend List
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/search-friend-list
+ ```
+ ### Request
+ ```json
+ {
+    "name" : "kya"
+ }
+ ```
+ ### Response
+ ```json
+ {
+    "friendShipsList": [
+        {
+            "friendId": "35a114c1-cd01-45b6-ae7d-67559fdf4a4c",
+            "name": "kyawkyaw",
+            "friendPhotoPath": ""
+        },
+        {
+            "friendId": "1dd57e00-e3b6-467f-abf4-33efb0c5d911",
+            "name": "kyawlay",
+            "friendPhotoPath": "https://drive.google.com/file/d/1J-VxICZVZZVJ89ZjHTG7XviDgyG7kPym"
+        },
+        {
+            "friendId": "67db8896-d093-4668-81db-064172fcf4e0",
+            "name": "kyawkyawlay",
+            "friendPhotoPath": "https://drive.google.com/file/d/1fXck6whns1MwEiNexYrmnErdJnvn7OrP"
+        },
+        {
+            "friendId": "77e0ae3b-b111-4aab-be31-d090e87c5c8a",
+            "name": "kyawlay",
+            "friendPhotoPath": ""
+        }
+    ],
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Get Friend List
+ ```js
+ GET http://localhost:8080/socialmediaapi/friendships/get-friend-list
+ ```
+ ### Request 
+ #### No request
+
+ ### Response
+ ```json
+ {
+    "friendShipsList": [],
+    "friendCount": 0,
+    "response": {
+        "responseCode": "W0002",
+        "responseDescription": "Data not found",
+        "responseType": 3,
+        "isError": true
+    }
+ }
+ ```
+ ### Get Friend Sent Request List
+ ```js
+ GET http://localhost:8080/socialmediaapi/friendships/get-friend-sent-request-list
+ ```
+ ### Request
+ #### No request
+
+ ### Response
+ ```json
+ {
+    "addFriendRequestList": [
+        {
+            "friendId": "1dd57e00-e3b6-467f-abf4-33efb0c5d911",
+            "name": "kyawlay",
+            "friendPhotoPath": "https://drive.google.com/file/d/1J-VxICZVZZVJ89ZjHTG7XviDgyG7kPym"
+        }
+    ],
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Add Friend Sent Request
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/add-friend-request-sent
+ ```
+ ### Request
+ ```json
+ {
+    "friendId": "1dd57e00-e3b6-467f-abf4-33efb0c5d911"
+ }
+ ```
+
+ ### Response 
+ ```json
+ {
+    "addFriendSentRequestStatus": "Pending",
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Approve Friend Sent Request
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/approve-friend-sent-request
+ ```
+ ### Request
+ ```json
+ {
+  "friendId": "991d0f9b-114e-40a5-8524-17e1188f639d",
+  "isAccept": true
+ }
+ ```
+ ### Response
+ ```json
+ {
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
+        "responseType": 1,
+        "isError": false
+    }
+ }
+ ```
+
+ ### Un Friend
+ ```js
+ POST http://localhost:8080/socialmediaapi/friendships/un-friend
+ ```
+ ### Request
+ ```json
+ {
+  "friendId": "b15f953b-b711-4f87-bad7-561c4ed8b82f"
+ }
+ ```
+ ### Response
+ ```json
+ {
+    "response": {
+        "responseCode": "S0000",
+        "responseDescription": "Success",
         "responseType": 1,
         "isError": false
     }

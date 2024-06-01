@@ -1,48 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj": {}
+    "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/ApiGatewayService.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj": {
+    "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/ApiGatewayService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
+        "projectUniqueName": "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/ApiGatewayService.csproj",
         "projectName": "ApiGatewayService",
-        "projectPath": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\ApiGatewayService.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Social App\\social-app-backend\\ApiGatewayService\\obj\\",
+        "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/ApiGatewayService.csproj",
+        "packagesPath": "/Users/sithuramyo/.nuget/packages/",
+        "outputPath": "/Users/sithuramyo/Documents/Project/social-app-backend/ApiGatewayService/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sithuramyo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/Shared.csproj": {
+                "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,7 +66,82 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/sithuramyo/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/Shared.csproj",
+        "packagesPath": "/Users/sithuramyo/.nuget/packages/",
+        "outputPath": "/Users/sithuramyo/Documents/Project/social-app-backend/Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sithuramyo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Localization.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.3.8, )"
+            },
+            "TimeZoneConverter": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/sithuramyo/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

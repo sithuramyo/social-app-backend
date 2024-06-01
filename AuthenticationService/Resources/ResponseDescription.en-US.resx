@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="E0000" xml:space="preserve">
-    <value>Unexcepted Error</value>
+    <value>Unexcepted error</value>
   </data>
   <data name="I0000" xml:space="preserve">
     <value>Service is unavailable</value>
@@ -127,9 +127,24 @@
     <value>Success</value>
   </data>
   <data name="W0000" xml:space="preserve">
-    <value>Data is null</value>
+    <value>Request is invalid</value>
   </data>
   <data name="W0002" xml:space="preserve">
-    <value>Login Invalid</value>
+    <value>Data not found</value>
+  </data>
+  <data name="E0001" xml:space="preserve">
+    <value>Fail to sent email</value>
+  </data>
+  <data name="W0001" xml:space="preserve">
+    <value>Duplicate data</value>
+  </data>
+  <data name="W0003" xml:space="preserve">
+    <value>Email is invalid</value>
+  </data>
+  <data name="W0004" xml:space="preserve">
+    <value>Otp code expired</value>
+  </data>
+  <data name="W0005" xml:space="preserve">
+    <value>Invalid Base64String</value>
   </data>
 </root>

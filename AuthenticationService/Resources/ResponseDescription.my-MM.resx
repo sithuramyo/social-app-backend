@@ -130,6 +130,21 @@
     <value>အချက်လက်များ မပါဝင်ပါ။</value>
   </data>
   <data name="W0002" xml:space="preserve">
-    <value>ဝင်ရောက်မရပါ။</value>
+    <value>အချက်အလတ်ရှာမတွေ့ပါ</value>
+  </data>
+  <data name="E0001" xml:space="preserve">
+    <value>အီးမေးလ်ပို့ခြင်းမအောင်မြင်ပါ</value>
+  </data>
+  <data name="W0001" xml:space="preserve">
+    <value>အချက်အလတ်တူညီနေပါသည်</value>
+  </data>
+  <data name="W0003" xml:space="preserve">
+    <value>အီးမေးလ်မှားယွင်းနေပါသည်</value>
+  </data>
+  <data name="W0004" xml:space="preserve">
+    <value>သက်တမ်းကုန်ဆုံးနေပါသည်</value>
+  </data>
+  <data name="W0005" xml:space="preserve">
+    <value>Invalid Base64String</value>
   </data>
 </root>
